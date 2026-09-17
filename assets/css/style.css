@@ -57,6 +57,7 @@ img[src$=".jpg"], img[src$=".png"], img[src$=".webp"], img[src$=".svg"] {
 
 /* Dark Theme Overrides */
 [data-theme="dark"] {
+  color-scheme: dark !important;
   --bg-primary: #101719;        /* Near Black */
   --bg-secondary: #17252B;      /* Deep Slate */
   --bg-surface: #1E2E35;        /* Dark Surface */
@@ -1315,8 +1316,10 @@ select.form-control {
 [data-theme="dark"] .modal-dialog input[type="date"],
 [data-theme="dark"] .form-control[type="date"] {
   color-scheme: dark !important;
+  color: #FFFFFF !important;
 }
 
+/* Custom 100% Pure White SVG Vector Calendar Icon for Dark Theme */
 [data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator,
 [data-theme="dark"] input[type="datetime-local"]::-webkit-calendar-picker-indicator,
 [data-theme="dark"] input[type="time"]::-webkit-calendar-picker-indicator,
@@ -1324,19 +1327,24 @@ select.form-control {
 [data-theme="dark"] .modal-dialog input[type="date"]::-webkit-calendar-picker-indicator,
 [data-theme="dark"] .form-control[type="date"]::-webkit-calendar-picker-indicator,
 [data-theme="dark"] .form-control::-webkit-calendar-picker-indicator {
-  filter: invert(1) brightness(10) !important;
-  -webkit-filter: invert(1) brightness(10) !important;
-  cursor: pointer !important;
+  background: transparent !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 18px 18px !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  width: 22px !important;
+  height: 22px !important;
   opacity: 1 !important;
+  cursor: pointer !important;
 }
 
 [data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator:hover,
 [data-theme="dark"] input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover,
 [data-theme="dark"] input[type="time"]::-webkit-calendar-picker-indicator:hover,
 [data-theme="dark"] .modal-dialog input[type="date"]::-webkit-calendar-picker-indicator:hover {
-  filter: invert(1) brightness(15) !important;
-  -webkit-filter: invert(1) brightness(15) !important;
-  opacity: 1 !important;
+  opacity: 0.85 !important;
 }
 [dir="rtl"] select.form-control {
   background-position: left 1.25rem center;
