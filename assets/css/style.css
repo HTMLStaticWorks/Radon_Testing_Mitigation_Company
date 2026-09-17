@@ -189,6 +189,11 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, a, label {
   transform: scaleX(-1);
 }
 
+[dir="rtl"] #backToTopBtn {
+  right: auto !important;
+  left: 2rem !important;
+}
+
 /* Accessibility Focus Ring */
 :focus-visible {
   outline: 3px solid var(--brand-amber);
@@ -460,6 +465,8 @@ main {
   transition: all var(--transition-normal);
   border: 2px solid transparent;
   white-space: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .btn-primary {
@@ -656,14 +663,14 @@ main {
   font-family: var(--font-heading);
   font-size: 2.75rem;
   font-weight: 800;
-  color: var(--text-main);
+  color: #FFFFFF !important;
   margin: 0.75rem 0 1rem 0;
   line-height: 1.2;
 }
 
 .page-hero-subtitle {
   font-size: 1.15rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.88) !important;
   max-width: 720px;
   margin: 0 auto;
   line-height: 1.6;
@@ -1299,6 +1306,27 @@ select.form-control {
 [data-theme="dark"] select.form-control {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394A6AE' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 }
+
+/* Dark Theme Date Picker & Calendar Icon High-Contrast White Styling */
+[data-theme="dark"] input[type="date"],
+[data-theme="dark"] input[type="datetime-local"],
+[data-theme="dark"] input[type="time"] {
+  color-scheme: dark;
+}
+
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator,
+[data-theme="dark"] input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+[data-theme="dark"] input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(2) !important;
+  cursor: pointer;
+  opacity: 0.95;
+}
+
+[data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator:hover,
+[data-theme="dark"] input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover,
+[data-theme="dark"] input[type="time"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
 [dir="rtl"] select.form-control {
   background-position: left 1.25rem center;
   padding-right: 1.15rem;
@@ -1452,6 +1480,22 @@ select.form-control {
 .newsletter-input:focus {
   outline: none;
   border-color: var(--brand-teal);
+}
+
+.newsletter-btn {
+  padding: 0 0.85rem !important;
+  height: 42px !important;
+  width: 42px !important;
+  min-width: 42px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: var(--radius-md) !important;
+  flex-shrink: 0 !important;
+}
+
+[dir="rtl"] .newsletter-btn svg {
+  transform: scaleX(-1);
 }
 
 .site-footer .social-icon-btn {
@@ -2137,6 +2181,45 @@ select.form-control {
   transform: translateX(0) !important;
 }
 
+/* RTL Mode Overrides — Standard Operating Procedure Vertical Timeline */
+[dir="rtl"] .timeline-step-item:nth-child(odd) {
+  left: auto;
+  right: 0;
+  text-align: right;
+}
+
+[dir="rtl"] .timeline-step-item:nth-child(even) {
+  left: auto;
+  right: 50%;
+  text-align: left;
+}
+
+[dir="rtl"] .timeline-step-item:nth-child(odd) .timeline-step-dot {
+  left: -10px;
+  right: auto;
+}
+
+[dir="rtl"] .timeline-step-item:nth-child(even) .timeline-step-dot {
+  right: -10px;
+  left: auto;
+}
+
+[dir="rtl"] .timeline-step-item:nth-child(odd) .step-header {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .timeline-step-item:nth-child(even) .step-header {
+  justify-content: flex-end;
+}
+
+[dir="rtl"] .timeline-step-item:nth-child(odd).reveal-on-scroll {
+  transform: translateX(40px);
+}
+
+[dir="rtl"] .timeline-step-item:nth-child(even).reveal-on-scroll {
+  transform: translateX(-40px);
+}
+
 /* TESTIMONIALS SECTION (HOME 1) */
 .testimonial-grid {
   display: grid;
@@ -2297,15 +2380,78 @@ select.form-control {
   .pricing-grid {
     grid-template-columns: 1fr;
   }
-  .nav-links, .nav-actions .btn, .nav-actions .theme-toggle-btn, .nav-actions .rtl-toggle-btn {
-    display: none;
+  .nav-links,
+  .nav-actions .btn,
+  .nav-actions .theme-toggle-btn,
+  .nav-actions .rtl-toggle-btn {
+    display: none !important;
   }
   .hamburger-btn {
-    display: flex;
+    display: flex !important;
   }
 }
 
 @media (max-width: 768px) {
+  /* MOBILE BUTTON OVERFLOW PREVENTION */
+  .btn:not(.newsletter-btn):not(.social-icon-btn):not(.theme-toggle-btn):not(.rtl-toggle-btn):not(.hamburger-btn) {
+    max-width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    word-break: break-word !important;
+    padding: 0.75rem 1.15rem !important;
+    font-size: 0.875rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* MOBILE HEADER OPTIMIZATION (LOGO LEFT, HAMBURGER RIGHT) */
+  .site-header {
+    height: 64px !important;
+  }
+
+  .nav-container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    justify-content: space-between !important;
+  }
+
+  .brand-logo {
+    gap: 0.6rem !important;
+    align-items: center !important;
+  }
+
+  .logo-svg {
+    width: 36px !important;
+    height: 36px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .brand-name {
+    font-size: 1.2rem !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  .brand-desc {
+    font-size: 0.58rem !important;
+    letter-spacing: 0.08em !important;
+    white-space: nowrap !important;
+    display: block !important;
+  }
+
+  .hamburger-btn {
+    display: flex !important;
+    width: 40px !important;
+    height: 40px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  .hamburger-btn svg {
+    width: 22px !important;
+    height: 22px !important;
+  }
   .vertical-timeline::before {
     left: 20px;
   }
@@ -2330,6 +2476,28 @@ select.form-control {
     align-items: flex-start !important;
     justify-content: flex-start !important;
     gap: 0.35rem !important;
+  }
+
+  /* Mobile Timeline RTL Overrides */
+  [dir="rtl"] .vertical-timeline::before {
+    right: 20px !important;
+    left: auto !important;
+  }
+  [dir="rtl"] .timeline-step-item {
+    width: 100% !important;
+    padding-right: 50px !important;
+    padding-left: 15px !important;
+  }
+  [dir="rtl"] .timeline-step-item:nth-child(odd),
+  [dir="rtl"] .timeline-step-item:nth-child(even) {
+    right: 0 !important;
+    left: auto !important;
+    text-align: right !important;
+  }
+  [dir="rtl"] .timeline-step-item:nth-child(odd) .timeline-step-dot,
+  [dir="rtl"] .timeline-step-item:nth-child(even) .timeline-step-dot {
+    right: 10px !important;
+    left: auto !important;
   }
   .step-tag {
     display: inline-block !important;
