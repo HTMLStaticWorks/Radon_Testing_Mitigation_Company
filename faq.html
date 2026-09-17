@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radon FAQ | Testing, Mitigation &amp; Re-Testing | Radenza</title>
+  <meta name="description" content="Clear, scientific answers about indoor radon testing, measurement continuous monitors, mitigation systems, and follow-up re-testing guidelines.">
+  <meta property="og:title" content="Radon FAQ | Radenza">
+  <meta property="og:description" content="Educational FAQ regarding radon measurement protocols, foundation entry pathways, and active depressurization systems.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- GLOBAL STICKY NAVBAR -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Radenza Radon Testing Home">
+        <!-- Luxury SVG Logo: Geometric R Monogram + Radon Detection Sensor + Environmental Airflow Arc -->
+        <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="radenzaTealGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#397A78"/>
+              <stop offset="100%" stop-color="#1E4745"/>
+            </linearGradient>
+            <linearGradient id="radenzaBrightTeal4" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4CB8B4"/>
+              <stop offset="100%" stop-color="#397A78"/>
+            </linearGradient>
+            <linearGradient id="radenzaAmberGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FCD566"/>
+              <stop offset="100%" stop-color="#D5A548"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 1. Geometric Outer Shield Base -->
+          <path d="M 50 6 L 86 26.5 A 3 3 0 0 1 88 29 L 88 71 A 3 3 0 0 1 86 73.5 L 50 94 A 3 3 0 0 1 47 94 L 14 73.5 A 3 3 0 0 1 12 71 L 12 29 A 3 3 0 0 1 14 26.5 Z" 
+                fill="url(#radenzaTealGrad4)" fill-opacity="0.08" stroke="currentColor" stroke-width="2.5" stroke-opacity="0.35"/>
+
+          <!-- 2. Monogram "R" Loop with Native Cutout (evenodd) -->
+          <path d="M 28 22 H 54 C 67 22 75 30 75 40 C 75 50 67 58 54 58 H 38 V 78 C 38 79.5 36.5 80 35 80 H 31 C 29.5 80 28 79.5 28 78 V 22 Z M 38 31 V 49 H 52 C 59 49 65 45 65 40 C 65 35 59 31 52 31 H 38 Z" 
+                fill-rule="evenodd" fill="url(#radenzaBrightTeal4)"/>
+
+          <!-- 3. Dynamic Mitigation Ribbon Leg -->
+          <path d="M 48 50 L 68 76 C 69.5 78 72 79.5 75.5 79.5 H 77.5 C 78.5 79.5 79 78.5 78 77 L 57 50 H 48 Z" 
+                fill="url(#radenzaBrightTeal4)"/>
+
+          <!-- 4. Safety Amber Radar Core -->
+          <circle cx="52" cy="40" r="5" fill="url(#radenzaAmberGrad4)"/>
+          <circle cx="52" cy="40" r="8.5" fill="none" stroke="#D5A548" stroke-width="1.5" stroke-dasharray="2.5 2.5" opacity="0.85"/>
+
+          <!-- 5. Environmental Airflow Arc -->
+          <path d="M 72 18 C 82 28 85 43 81 57" fill="none" stroke="url(#radenzaAmberGrad4)" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text-wrap">
+          <span class="brand-name">RADENZA</span>
+          <span class="brand-desc">RADON TESTING &amp; MITIGATION</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle dark mode"><span class="theme-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span></button>
+        <button class="rtl-toggle-btn" aria-label="Toggle RTL layout"><span class="rtl-label">RTL</span></button>
+        <button class="btn btn-primary" data-modal-target="testingModal">Book a Test &rarr;</button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay">
+    <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true">
+      <div class="drawer-header">
+        <div class="brand-text-wrap">
+          <span class="brand-name">RADENZA</span>
+          <span class="brand-desc">RADON TESTING &amp; MITIGATION</span>
+        </div>
+        <button class="drawer-close-btn" id="drawerCloseBtn">&times;</button>
+      </div>
+      <ul class="drawer-nav-links">
+        <li><a href="index.html" class="drawer-nav-link">Home</a></li>
+        <li><a href="index2.html" class="drawer-nav-link">Home 2</a></li>
+        <li><a href="services.html" class="drawer-nav-link">Services</a></li>
+        <li><a href="faq.html" class="drawer-nav-link">FAQ</a></li>
+        <li><a href="pricing.html" class="drawer-nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="drawer-nav-link">Contact</a></li>
+      </ul>
+      <div class="drawer-actions">
+        <div class="drawer-controls">
+          <button class="theme-toggle-btn" aria-label="Toggle dark mode">
+            <span class="theme-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </span>
+          </button>
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL layout">
+            <span class="rtl-label">RTL</span>
+          </button>
+        </div>
+        <button class="btn btn-primary" data-modal-target="testingModal" style="width: 100%;">Book a Test &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- FAQ HERO SECTION -->
+    <section class="page-hero-section">
+      <div class="container page-hero-container reveal-on-scroll">
+        <span class="mono-tag">RADENZA KNOWLEDGE BASE</span>
+        <h1 class="page-hero-title">Radon Science &amp; Safety Knowledge Base</h1>
+        <p class="page-hero-subtitle">
+          Structured answers regarding indoor radon gas science, continuous sampling protocols, active depressurization systems, and property standards.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ — QUESTIONS SECTION WITH SEARCH & FILTERS -->
+    <section class="section">
+      <div class="container">
+        
+        <!-- Live Instant Search Bar & Filter Pills (Merged with Questions Section) -->
+        <div style="max-width: 840px; margin: 0 auto 3rem auto; text-align: center;" class="reveal-on-scroll">
+          <div class="faq-search-wrapper" style="margin-bottom: 1.25rem;">
+            <svg class="faq-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="faqSearchInput" class="faq-search-input" placeholder="Search questions by topic or keyword (e.g. CRM, EPA, foundation, fan, cost)..." aria-label="Search FAQ knowledge base">
+          </div>
+
+          <div class="faq-filter-pills" style="margin-bottom: 0;">
+            <button class="faq-filter-pill active" data-category="all">All Questions</button>
+            <button class="faq-filter-pill" data-category="fundamentals">Radon Fundamentals</button>
+            <button class="faq-filter-pill" data-category="testing">Testing &amp; Protocols</button>
+            <button class="faq-filter-pill" data-category="mitigation">Mitigation Engineering</button>
+            <button class="faq-filter-pill" data-category="realestate">Real Estate &amp; Safety</button>
+          </div>
+        </div>
+
+        <div class="faq-featured-grid reveal-on-scroll">
+          
+          <div class="faq-featured-card" data-category="fundamentals">
+            <div>
+              <span class="faq-badge">TOP QUESTION • FUNDAMENTALS</span>
+              <h3 class="faq-open-title" style="margin-bottom: 0.75rem;">Can I smell or see radon in my home?</h3>
+              <p class="faq-open-body">
+                No. Radon gas is completely colorless, odorless, and tasteless. It cannot be detected by normal human senses. Standard calibrated continuous monitoring devices are the only reliable method to measure indoor radon concentrations.
+              </p>
+            </div>
+            <div class="faq-takeaway-box">
+              <strong>Key Takeaway:</strong> Continuous radon monitors (CRMs) provide precise, quantitative measurement relying on sensory detection.
+            </div>
+          </div>
+
+          <div class="faq-featured-card" data-category="mitigation">
+            <div>
+              <span class="faq-badge">SYSTEM SCIENCE • MITIGATION</span>
+              <h3 class="faq-open-title" style="margin-bottom: 0.75rem;">How does active sub-slab mitigation work?</h3>
+              <p class="faq-open-body">
+                Active Sub-Slab Depressurization (ASD) uses a continuous inline fan connected to sealed PVC suction piping inserted beneath the concrete foundation slab. This creates negative pressure under the building, drawing soil gas out and venting it safely above the roofline.
+              </p>
+            </div>
+            <div class="faq-takeaway-box">
+              <strong>Key Takeaway:</strong> Reverses negative pressure differentials to prevent soil gas from entering indoor living areas.
+            </div>
+          </div>
+
+          <div class="faq-featured-card" data-category="fundamentals">
+            <div>
+              <span class="faq-badge">PROPERTY VARIABILITY</span>
+              <h3 class="faq-open-title" style="margin-bottom: 0.75rem;">Does every building have identical radon levels?</h3>
+              <p class="faq-open-body">
+                No. Radon levels vary widely between properties—even between neighboring houses built on identical streets. Sub-slab soil composition, foundation micro-cracks, floor-wall expansion joints, and ventilation rates create unique readings for every structure.
+              </p>
+            </div>
+            <div class="faq-takeaway-box">
+              <strong>Key Takeaway:</strong> Neighboring houses can have completely different radon readings due to sub-slab soil permeability.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ — BUILDING SCIENCE MATRIX (RIGHT ABOVE PART 01) -->
+    <section class="section section-pale">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">BUILDING SCIENCE MATRIX</span>
+          <h2 style="margin: 0.5rem 0 1rem 0;">Radon Myths vs. Building Science Realities</h2>
+          <p style="max-width: 650px; margin: 0 auto 2.5rem auto;">Clearing up common misconceptions with factual building engineering data.</p>
+        </div>
+
+        <div class="fact-myth-container reveal-on-scroll">
+          
+          <!-- MYTHS COLUMN -->
+          <div class="fact-myth-col">
+            <div class="fact-myth-header">
+              <svg class="myth-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              <div>
+                <h3 style="margin: 0; color: #E53935;">Common Misconceptions</h3>
+                <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">UNSUBSTANTIATED CLAIMS</span>
+              </div>
+            </div>
+
+            <div class="fact-myth-list">
+              <div class="fact-myth-item myth-item">
+                <strong>Myth #1:</strong> "My house is brand new and has a solid poured concrete basement, so radon gas cannot get inside."
+              </div>
+              <div class="fact-myth-item myth-item">
+                <strong>Myth #2:</strong> "My next-door neighbor tested low, so my home is automatically safe from radon."
+              </div>
+              <div class="fact-myth-item myth-item">
+                <strong>Myth #3:</strong> "Radon mitigation systems are noisy, ugly, and pull expensive heat out of the house."
+              </div>
+              <div class="fact-myth-item myth-item">
+                <strong>Myth #4:</strong> "Radon testing is only necessary for homes with full basements, not slab-on-grade or crawlspace homes."
+              </div>
+            </div>
+          </div>
+
+          <!-- FACTS COLUMN -->
+          <div class="fact-myth-col">
+            <div class="fact-myth-header">
+              <svg class="fact-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <div>
+                <h3 style="margin: 0; color: var(--brand-teal);">Building Science Realities</h3>
+                <span style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">VERIFIED ENGINEERING FACTS</span>
+              </div>
+            </div>
+
+            <div class="fact-myth-list">
+              <div class="fact-myth-item fact-item">
+                <strong>Fact #1:</strong> Concrete shrinks during curing, creating microscopic pathways. Radon enters through slab joints, sump pits, and pipe penetrations regardless of building age.
+              </div>
+              <div class="fact-myth-item fact-item">
+                <strong>Fact #2:</strong> Sub-slab soil permeability varies significantly from lot to lot; adjacent houses frequently have completely different radon readings.
+              </div>
+              <div class="fact-myth-item fact-item">
+                <strong>Fact #3:</strong> Modern inline fans operate silently (~40W), and suction pipes are custom color-matched or routed along exterior architectural trim.
+              </div>
+              <div class="fact-myth-item fact-item">
+                <strong>Fact #4:</strong> Soil gas enters any building in contact with the earth, including slab-on-grade, crawlspace, and split-level structures.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ — SECTION 02 — PART 01: RADON FUNDAMENTALS -->
+    <section class="section faq-category-section">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">PART 01</span>
+          <h2 style="margin: 0.5rem 0 1rem 0;">Radon Science &amp; Soil Gas Dynamics</h2>
+          <p style="max-width: 600px; margin: 0 auto 2.5rem auto;">Understanding the geological origin, migration mechanisms, and entry pathways of sub-slab soil gas.</p>
+        </div>
+
+        <div class="faq-open-grid reveal-on-scroll">
+          
+          <div class="faq-open-card" data-category="fundamentals">
+            <div class="faq-card-header">
+              <div class="faq-q-icon">Q1</div>
+              <h3 class="faq-open-title">What is radon gas and how is it created beneath buildings?</h3>
+            </div>
+            <div class="faq-open-body">
+              Radon is an inert, naturally occurring gas created by the radioactive decay of trace uranium minerals naturally present in soil, granite, and rock bedrock. As uranium decays into radium and radon, the gas moves freely through subterranean soil pore spaces towards areas of lower air pressure, such as building foundations.
+            </div>
+            <div class="faq-meta-tags">
+              <span class="faq-meta-tag">#SoilGas</span>
+              <span class="faq-meta-tag">#GeologicalOrigin</span>
+              <span class="faq-meta-tag">#DecayChain</span>
+            </div>
+          </div>
+
+          <div class="faq-open-card" data-category="fundamentals">
+            <div class="faq-card-header">
+              <div class="faq-q-icon">Q2</div>
+              <h3 class="faq-open-title">What are the primary entry pathways into concrete foundation slabs?</h3>
+            </div>
+            <div class="faq-open-body">
+              Radon enters buildings through microscopic concrete slab shrinkage cracks, unsealed sump pump pits, perimeter floor-to-wall expansion joints, utility pipe penetrations, hollow concrete block walls, and unencapsulated dirt crawlspaces under negative air pressure conditions.
+            </div>
+            <div class="faq-meta-tags">
+              <span class="faq-meta-tag">#SlabCracks</span>
+              <span class="faq-meta-tag">#SumpPits</span>
+              <span class="faq-meta-tag">#UtilityPenetrations</span>
+            </div>
+          </div>
+
+          <div class="faq-open-card" data-category="fundamentals">
+            <div class="faq-card-header">
+              <div class="faq-q-icon">Q3</div>
+              <h3 class="faq-open-title">Why is testing necessary for every residential &amp; commercial structure?</h3>
+            </div>
+            <div class="faq-open-body">
+              Because radon cannot be perceived by human sight or smell, testing is the only empirical method to determine property-specific indoor radon levels. Documented diagnostic data allows building managers and homeowners to evaluate air safety objectively.
+            </div>
+            <div class="faq-meta-tags">
+              <span class="faq-meta-tag">#AirSafety</span>
+              <span class="faq-meta-tag">#EmpiricalData</span>
+              <span class="faq-meta-tag">#PropertyDocumentation</span>
+            </div>
+          </div>
+
+          <div class="faq-open-card" data-category="fundamentals">
+            <div class="faq-card-header">
+              <div class="faq-q-icon">Q4</div>
+              <h3 class="faq-open-title">How do seasonal weather cycles &amp; heating affect indoor radon levels?</h3>
+            </div>
+            <div class="faq-open-body">
+              Indoor radon levels fluctuate seasonally. During winter months, warm air rising inside heated buildings creates a "stack effect" vacuum that draws soil gas upward faster. Heavy rain also fills soil pore spaces, driving trapped soil gas under the foundation slab.
+            </div>
+            <div class="faq-meta-tags">
+              <span class="faq-meta-tag">#StackEffect</span>
+              <span class="faq-meta-tag">#SeasonalFluctuations</span>
+              <span class="faq-meta-tag">#BarometricPressure</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ — SECTION 03 — PART 02: TESTING & PROTOCOLS -->
+    <section class="section faq-category-section">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">PART 02</span>
+          <h2 style="margin: 0.5rem 0 1rem 0;">Testing Protocols &amp; Measurement Science</h2>
+          <p style="max-width: 600px; margin: 0 auto 2.5rem auto;">Standardized deployment protocols, closed-building requirements, and continuous monitor analytics.</p>
+        </div>
+
+        <div class="faq-open-grid reveal-on-scroll">
+          
+          <div class="faq-open-card" data-category="testing">
+            <div class="faq-card-header">
+              <div class="faq-q-icon">Q5</div>
+              <h3 class="faq-open-title">What is the difference between short-term (48-hr) and long-term testing?</h3>
+            </div>
+            <div class="faq-open-body">
+              Short-term Continuous Radon Monitoring (48 hours to 7 days) provides rapid, high-precision hourly measurement data under closed-building conditions, ideal for real estate sales. Long-term detectors (90 days to 1 year) measure true annual average concentrations under normal living habits.
+            </div>
+            <div class="faq-meta-tags">
+              <span class="faq-meta-tag">#48HrCRM</span>
+              <span class="faq-meta-tag">#LongTerm90Days</span>
+              <span class="faq-meta-tag">#ContinuousSampling</span>
+            </div>
+          </div>
+
+          <div class="faq-open-card" data-category="testing">
+            <div class="faq-card-header">
+              <div class="faq-q-icon">Q6</div>
+              <h3 class="faq-open-title">Where must testing equipment be placed inside a building?</h3>
+            </div>
+            <div class="faq-open-body">
+              Equipment is placed in the lowest lived-in area of the structure (e.g., finished basement or ground floor living area), at least 20 inches off the floor, away from exterior walls, windows, direct sunlight, kitchen exhausts, high humidity, or drafts.
+            </div>
+            <div class="faq-meta-tags">
+              <span class="faq-meta-tag">#LowestLivedInLevel</span>
+              <span class="faq-meta-tag">#PlacementStandard</span>
+              <span class="faq-meta-tag">#Calibration</span>
+            </div>
+          </div>
+
+          <div class="faq-open-card" data-category="testing">
+            <div class="faq-card-header">
+              <div class="faq-q-icon">Q7</div>
+              <h3 class="faq-open-title">What are "Closed-Building Conditions" during a 48-hour short-term test?</h3>
+            </div>
+            <div class="faq-open-body">
+              Closed-building protocol requires keeping all windows and exterior doors shut for 12 hours prior to and throughout the 48-hour testing period, except for normal, brief entry and exit. Internal HVAC heating and cooling systems operate normally.
+            </div>
+            <div class="faq-meta-tags">
+              <span class="faq-meta-tag">#ClosedBuildingRules</span>
+              <span class="faq-meta-tag">#TestIntegrity</span>
+              <span class="faq-meta-tag">#HVACSettings</span>
+            </div>
+          </div>
+
+          <div class="faq-open-card" data-category="testing">
+            <div class="faq-card-header">
+              <div class="faq-q-icon">Q8</div>
+              <h3 class="faq-open-title">How are continuous monitor results reported &amp; what does pCi/L mean?</h3>
+            </div>
+            <div class="faq-open-body">
+              Radon is measured in Picocuries per Liter (pCi/L) of air. Continuous monitors log hourly concentrations and compute an overall average. The EPA reference action level is 4.0 pCi/L, with recommendations to consider mitigation for levels between 2.0 and 4.0 pCi/L.
+            </div>
+            <div class="faq-meta-tags">
+              <span class="faq-meta-tag">#pCi/LUnits</span>
+              <span class="faq-meta-tag">#EPAActionLevel</span>
+              <span class="faq-meta-tag">#HourlyLogs</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ — SECTION 04 — PART 03: MITIGATION ENGINEERING -->
+    <section class="section section-pale faq-category-section">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">PART 03</span>
+          <h2 style="margin: 0.5rem 0 1rem 0;">Mitigation Engineering &amp; System Performance</h2>
+          <p style="max-width: 600px; margin: 0 auto 2.5rem auto;">Active sub-slab depressurization mechanics, manometer pressure gauges, and quiet fan operation.</p>
+        </div>
+
+        <div class="faq-open-grid reveal-on-scroll">
+          
+          <div class="faq-open-card" data-category="mitigation">
+            <div class="faq-card-header">
+              <div class="faq-q-icon">Q9</div>
+              <h3 class="faq-open-title">What components make up an Active Sub-Slab Depressurization (ASD) system?</h3>
+            </div>
+            <div class="faq-open-body">
+              An ASD system comprises a suction pit cored into the concrete slab, sealed 3" or 4" Schedule-40 PVC piping, a continuous-duty inline centrifugal fan, a U-tube manometer liquid pressure gauge, sealed foundation openings, and a vertical roof exhaust vent stack.
+            </div>
+            <div class="faq-meta-tags">
+              <span class="faq-meta-tag">#ASDSystem</span>
+              <span class="faq-meta-tag">#PVCSuctionPipe</span>
+              <span class="faq-meta-tag">#CentrifugalFan</span>
+            </div>
+          </div>
+
+          <div class="faq-open-card" data-category="mitigation">
+            <div class="faq-card-header">
+              <div class="faq-q-icon">Q10</div>
+              <h3 class="faq-open-title">Does a radon mitigation fan run 24 hours a day &amp; how much electricity does it use?</h3>
+            </div>
+            <div class="faq-open-body">
+              Yes. Active depressurization fans run 24/7 to maintain constant negative pressure beneath the foundation. Modern fans are energy-efficient, drawing only 40 to 80 Watts (similar to a standard household light bulb) with quiet, vibration-isolated operation.
+            </div>
+            <div class="faq-meta-tags">
+              <span class="faq-meta-tag">#24-7Operation</span>
+              <span class="faq-meta-tag">#40-80Watts</span>
+              <span class="faq-meta-tag">#QuietMotor</span>
+            </div>
+          </div>
+
+          <div class="faq-open-card" data-category="mitigation">
+            <div class="faq-card-header">
+              <div class="faq-q-icon">Q11</div>
+              <h3 class="faq-open-title">How do property owners read the U-Tube Manometer pressure gauge?</h3>
+            </div>
+            <div class="faq-open-body">
+              The U-tube manometer mounted on the suction pipe contains colored fluid. When the fan operates, suction creates a height difference between the liquid columns. Unequal liquid levels indicate active vacuum pressure; equal liquid levels indicate fan power loss or blockage.
+            </div>
+            <div class="faq-meta-tags">
+              <span class="faq-meta-tag">#U-TubeManometer</span>
+              <span class="faq-meta-tag">#PressureGauge</span>
+              <span class="faq-meta-tag">#SystemMonitoring</span>
+            </div>
+          </div>
+
+          <div class="faq-open-card" data-category="mitigation">
+            <div class="faq-card-header">
+              <div class="faq-q-icon">Q12</div>
+              <h3 class="faq-open-title">What post-mitigation verification testing is required after installation?</h3>
+            </div>
+            <div class="faq-open-body">
+              A 48-hour continuous verification radon test is conducted 24 hours after system activation to confirm that active sub-slab depressurization successfully reduced indoor radon concentrations below target action guidelines.
+            </div>
+            <div class="faq-meta-tags">
+              <span class="faq-meta-tag">#VerificationRetest</span>
+              <span class="faq-meta-tag">#PostMitigation</span>
+              <span class="faq-meta-tag">#PerformanceGuarantee</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ — SECTION 05 — PART 04: REAL ESTATE & SAFETY -->
+    <section class="section faq-category-section">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">PART 04</span>
+          <h2 style="margin: 0.5rem 0 1rem 0;">Real Estate Transactions &amp; Property Safety</h2>
+          <p style="max-width: 600px; margin: 0 auto 2.5rem auto;">Property inspection contingencies, escrow negotiations, and long-term resale value.</p>
+        </div>
+
+        <div class="faq-open-grid reveal-on-scroll">
+          
+          <div class="faq-open-card" data-category="realestate">
+            <div class="faq-card-header">
+              <div class="faq-q-icon">Q13</div>
+              <h3 class="faq-open-title">How is radon testing handled during a home purchase or real estate transaction?</h3>
+            </div>
+            <div class="faq-open-body">
+              Radon testing is a standard contingency in property sales agreements. Certified technicians deploy tamper-monitored 48-hour continuous radon devices during the inspection window to provide documented, contract-ready reports for buyers and sellers.
+            </div>
+            <div class="faq-meta-tags">
+              <span class="faq-meta-tag">#RealEstateContingency</span>
+              <span class="faq-meta-tag">#HomeInspection</span>
+              <span class="faq-meta-tag">#TamperMonitored</span>
+            </div>
+          </div>
+
+          <div class="faq-open-card" data-category="realestate">
+            <div class="faq-card-header">
+              <div class="faq-q-icon">Q14</div>
+              <h3 class="faq-open-title">Who typically pays for radon mitigation system installation during a home sale?</h3>
+            </div>
+            <div class="faq-open-body">
+              If short-term test results equal or exceed 4.0 pCi/L, real estate buyers routinely request that sellers either install a professional mitigation system prior to closing or provide an escrow credit for post-closing installation.
+            </div>
+            <div class="faq-meta-tags">
+              <span class="faq-meta-tag">#EscrowCredit</span>
+              <span class="faq-meta-tag">#SellerResponsibility</span>
+              <span class="faq-meta-tag">#ClosingTerms</span>
+            </div>
+          </div>
+
+          <div class="faq-open-card" data-category="realestate">
+            <div class="faq-card-header">
+              <div class="faq-q-icon">Q15</div>
+              <h3 class="faq-open-title">What ongoing maintenance does a radon mitigation system require over time?</h3>
+            </div>
+            <div class="faq-open-body">
+              Active mitigation systems require minimal ongoing maintenance: checking the U-tube manometer fluid levels every few months to ensure fan suction, inspecting pipe seal joints annually, and replacing the centrifugal fan motor after its typical 8–12 year operational lifespan.
+            </div>
+            <div class="faq-meta-tags">
+              <span class="faq-meta-tag">#SystemMaintenance</span>
+              <span class="faq-meta-tag">#FanLifespan8-12Yrs</span>
+              <span class="faq-meta-tag">#AnnualCheck</span>
+            </div>
+          </div>
+
+          <div class="faq-open-card" data-category="realestate">
+            <div class="faq-card-header">
+              <div class="faq-q-icon">Q16</div>
+              <h3 class="faq-open-title">Does a radon mitigation system affect home resale value or buyer confidence?</h3>
+            </div>
+            <div class="faq-open-body">
+              Yes, positively. A professionally installed, certified radon mitigation system resolves buyer indoor air quality concerns, provides verified lower radon test documentation, and demonstrates proactive property building safety maintenance.
+            </div>
+            <div class="faq-meta-tags">
+              <span class="faq-meta-tag">#PropertyResale</span>
+              <span class="faq-meta-tag">#BuyerConfidence</span>
+              <span class="faq-meta-tag">#CertifiedSafety</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ — FINAL CTA -->
+    <section class="section section-dark">
+      <div class="container text-center reveal-on-scroll">
+        <span class="mono-tag" style="color: var(--brand-amber);">HAVE SPECIFIC PROPERTY QUESTIONS?</span>
+        <h2 style="margin: 1rem 0 1.25rem 0; color: #FFFFFF;">Still Have Questions About Your Property?</h2>
+        <p style="max-width: 650px; margin: 0 auto 2.5rem auto;">
+          If you are unsure whether your building should be tested or how to interpret a previous result, speak directly with our technical environmental inspection team.
+        </p>
+        <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
+          <button class="btn btn-amber" data-modal-target="testingModal">Book a Radon Test &rarr;</button>
+          <a href="contact.html" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.3); color: #FFFFFF;">Contact Our Team</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- UNIVERSAL MODALS -->
+  <!-- 1. Book a Radon Test Modal -->
+  <div class="modal-overlay" id="testingModal" role="dialog" aria-modal="true" aria-labelledby="testModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <span class="mono-tag">SCHEDULE ASSESSMENT</span>
+        <h3 id="testModalTitle" style="margin-top: 0.4rem;">Book a Radon Test</h3>
+      </div>
+      <form class="modal-form">
+        <div class="modal-form-body">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" required placeholder="Jane Doe">
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" required placeholder="jane@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" required placeholder="+1 (555) 000-0000">
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Property Type</label>
+              <select class="form-control" required>
+                <option value="Single Family">Single Family Home</option>
+                <option value="Condo">Apartment / Condo</option>
+                <option value="Commercial">Commercial Building</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Preferred Date</label>
+              <input type="date" class="form-control" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Continue &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Request Mitigation Quote Modal -->
+  <div class="modal-overlay" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <span class="mono-tag">SYSTEM PLANNING</span>
+        <h3 id="quoteModalTitle" style="margin-top: 0.4rem;">Request Mitigation Quote</h3>
+      </div>
+      <form class="modal-form">
+        <div class="modal-form-body">
+          <div class="form-group">
+            <label class="form-label">Property Type</label>
+            <select class="form-control" required>
+              <option value="Single Family">Single Family Residence</option>
+              <option value="Multi-Family">Multi-Family Structure</option>
+              <option value="Commercial">Commercial / Office</option>
+            </select>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Foundation Type</label>
+              <select class="form-control" required>
+                <option value="Basement">Basement</option>
+                <option value="Slab">Slab-on-Grade</option>
+                <option value="Crawlspace">Crawlspace</option>
+                <option value="Mixed">Mixed Foundation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Approx Size (sq ft)</label>
+              <input type="number" class="form-control" placeholder="e.g. 2400">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">ZIP / Postal Code</label>
+            <input type="text" class="form-control" required placeholder="12345">
+          </div>
+          <button type="submit" class="btn btn-amber" style="width: 100%; margin-top: 1rem;">Request Estimate &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem; display: inline-flex;" aria-label="Radenza Home">
+            <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="footerTealGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#4CB8B4"/>
+                  <stop offset="100%" stop-color="#397A78"/>
+                </linearGradient>
+                <linearGradient id="footerAmberGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FCD566"/>
+                  <stop offset="100%" stop-color="#D5A548"/>
+                </linearGradient>
+              </defs>
+              <path d="M 50 6 L 86 26.5 A 3 3 0 0 1 88 29 L 88 71 A 3 3 0 0 1 86 73.5 L 50 94 A 3 3 0 0 1 47 94 L 14 73.5 A 3 3 0 0 1 12 71 L 12 29 A 3 3 0 0 1 14 26.5 Z" 
+                    fill="url(#footerTealGrad4)" fill-opacity="0.12" stroke="#4CB8B4" stroke-width="2.5" stroke-opacity="0.5"/>
+              <path d="M 28 22 H 54 C 67 22 75 30 75 40 C 75 50 67 58 54 58 H 38 V 78 C 38 79.5 36.5 80 35 80 H 31 C 29.5 80 28 79.5 28 78 V 22 Z M 38 31 V 49 H 52 C 59 49 65 45 65 40 C 65 35 59 31 52 31 H 38 Z" 
+                    fill-rule="evenodd" fill="url(#footerTealGrad4)"/>
+              <path d="M 48 50 L 68 76 C 69.5 78 72 79.5 75.5 79.5 H 77.5 C 78.5 79.5 79 78.5 78 77 L 57 50 H 48 Z" 
+                    fill="url(#footerTealGrad4)"/>
+              <circle cx="52" cy="40" r="5" fill="url(#footerAmberGrad4)"/>
+              <circle cx="52" cy="40" r="8.5" fill="none" stroke="#D5A548" stroke-width="1.5" stroke-dasharray="2.5 2.5" opacity="0.85"/>
+              <path d="M 72 18 C 82 28 85 43 81 57" fill="none" stroke="url(#footerAmberGrad4)" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div class="brand-text-wrap">
+              <span class="brand-name" style="color: #FFFFFF;">RADENZA</span>
+              <span class="brand-desc" style="color: #94A6AE;">RADON TESTING &amp; MITIGATION</span>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem;">
+            Professional residential and commercial radon measurement, mitigation system design, and post-mitigation verification services.
+          </p>
+
+          <!-- Social Media Icons Bar -->
+          <div style="display: flex; gap: 0.65rem; margin-top: 1.25rem;">
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter / X Profile" title="Twitter / X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Facebook Page" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube Channel" title="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram Profile" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>EXPLORE</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index2.html">Home 2 (Monitoring)</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="pricing.html">Pricing Guide</a></li>
+            <li><a href="contact.html">Contact &amp; Booking</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>SERVICES</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Radon Testing</a></li>
+            <li><a href="services.html">Radon Mitigation</a></li>
+            <li><a href="services.html">Re-Testing Verification</a></li>
+            <li><a href="services.html">Property Assessment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>CONTACT</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Phone: +1 (800) 555-RADON</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Email: hello@radenza-demo.com</p>
+          <p style="font-size: 0.85rem;">Mon - Fri: 8:00 AM – 6:00 PM</p>
+        </div>
+
+        <div>
+          <h4>AIR SAFETY TIPS</h4>
+          <p style="font-size: 0.85rem;">Subscribe for non-alarmist practical building indoor air safety guidance.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Radenza educational updates.');">
+            <input type="email" class="newsletter-input" placeholder="Enter email..." required>
+            <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem;">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 RADENZA. All rights reserved. Professional Radon Testing &amp; Mitigation.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/booking.js"></script>
+  <script src="assets/js/faq.js"></script>
+</body>
+</html>

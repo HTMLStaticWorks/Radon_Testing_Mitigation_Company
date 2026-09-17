@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A1820"/>
+      <stop offset="40%" stop-color="#17252B"/>
+      <stop offset="100%" stop-color="#1E3040"/>
+    </linearGradient>
+    <linearGradient id="groundGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0D1F28"/>
+      <stop offset="100%" stop-color="#080E12"/>
+    </linearGradient>
+    <linearGradient id="windowGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D5A548" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#C49030" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="tealGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#397A78" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#4D9694" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#397A78" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <filter id="blur5">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="900" height="600" fill="url(#skyGrad)"/>
+
+  <!-- Stars -->
+  <g fill="#FFFFFF" opacity="0.4">
+    <circle cx="50" cy="30" r="1.2"/>
+    <circle cx="120" cy="55" r="0.8"/>
+    <circle cx="200" cy="20" r="1.5"/>
+    <circle cx="310" cy="45" r="0.9"/>
+    <circle cx="420" cy="15" r="1.1"/>
+    <circle cx="550" cy="35" r="1.3"/>
+    <circle cx="680" cy="22" r="0.7"/>
+    <circle cx="780" cy="50" r="1.0"/>
+    <circle cx="850" cy="28" r="1.4"/>
+    <circle cx="750" cy="70" r="0.6"/>
+    <circle cx="640" cy="65" r="0.9"/>
+    <circle cx="480" cy="58" r="1.2"/>
+    <circle cx="160" cy="80" r="0.8"/>
+    <circle cx="30" cy="90" r="1.0"/>
+    <circle cx="870" cy="80" r="0.9"/>
+  </g>
+
+  <!-- Moon -->
+  <circle cx="780" cy="65" r="28" fill="#D5A548" opacity="0.15" filter="url(#blur5)"/>
+  <circle cx="780" cy="65" r="18" fill="#D5A548" opacity="0.25" filter="url(#blur2)"/>
+  <circle cx="780" cy="65" r="10" fill="#E6C070" opacity="0.6"/>
+
+  <!-- Horizon atmospheric glow -->
+  <ellipse cx="450" cy="320" rx="500" ry="80" fill="#397A78" opacity="0.06" filter="url(#blur5)"/>
+
+  <!-- Ground plane -->
+  <rect x="0" y="420" width="900" height="180" fill="url(#groundGrad)"/>
+
+  <!-- Trees / landscaping left -->
+  <g fill="#0D1F28" opacity="0.9">
+    <ellipse cx="60" cy="390" rx="30" ry="60"/>
+    <rect x="55" y="395" width="10" height="35"/>
+    <ellipse cx="100" cy="400" rx="22" ry="45"/>
+    <rect x="96" y="405" width="8" height="25"/>
+  </g>
+
+  <!-- Trees / landscaping right -->
+  <g fill="#0D1F28" opacity="0.9">
+    <ellipse cx="840" cy="395" rx="28" ry="55"/>
+    <rect x="835" y="400" width="10" height="30"/>
+    <ellipse cx="800" cy="405" rx="20" ry="40"/>
+    <rect x="796" y="408" width="8" height="22"/>
+  </g>
+
+  <!-- MAIN BUILDING - Modern Residential Structure -->
+  <!-- Main body -->
+  <rect x="160" y="200" width="580" height="230" fill="#1A2E38" rx="4"/>
+
+  <!-- Roof flat with overhang -->
+  <rect x="140" y="185" width="620" height="22" fill="#0E1F28" rx="3"/>
+  <!-- Roof accent teal line -->
+  <rect x="140" y="185" width="620" height="3" fill="#397A78" opacity="0.8"/>
+
+  <!-- Building facade panels / texture -->
+  <rect x="170" y="210" width="2" height="210" fill="#0E1F28" opacity="0.6"/>
+  <rect x="220" y="210" width="2" height="210" fill="#0E1F28" opacity="0.4"/>
+  <rect x="680" y="210" width="2" height="210" fill="#0E1F28" opacity="0.4"/>
+  <rect x="728" y="210" width="2" height="210" fill="#0E1F28" opacity="0.6"/>
+
+  <!-- Left wing / garage section -->
+  <rect x="100" y="260" width="160" height="170" fill="#152530" rx="2"/>
+  <!-- Garage door -->
+  <rect x="115" y="310" width="130" height="90" fill="#0C1C25" rx="2"/>
+  <line x1="115" y1="340" x2="245" y2="340" stroke="#397A78" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="115" y1="365" x2="245" y2="365" stroke="#397A78" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="115" y1="390" x2="245" y2="390" stroke="#397A78" stroke-width="1" stroke-opacity="0.4"/>
+
+  <!-- Right wing extension -->
+  <rect x="640" y="250" width="160" height="180" fill="#152530" rx="2"/>
+
+  <!-- WINDOWS - MAIN FLOOR Large panoramic -->
+  <!-- Left large window -->
+  <rect x="175" y="220" width="180" height="130" fill="#0A1820" rx="2"/>
+  <rect x="175" y="220" width="180" height="130" fill="url(#windowGlow)" opacity="0.15" rx="2"/>
+  <!-- Window warm interior glow -->
+  <rect x="177" y="222" width="176" height="126" fill="#D5A548" opacity="0.08" rx="1" filter="url(#blur2)"/>
+  <!-- Window frame dividers -->
+  <line x1="265" y1="220" x2="265" y2="350" stroke="#0E2030" stroke-width="3"/>
+  <line x1="175" y1="285" x2="355" y2="285" stroke="#0E2030" stroke-width="2"/>
+
+  <!-- Center window strip -->
+  <rect x="390" y="215" width="120" height="140" fill="#0A1820" rx="2"/>
+  <rect x="390" y="215" width="120" height="140" fill="#D5A548" opacity="0.12" rx="2" filter="url(#blur2)"/>
+
+  <!-- Right large window -->
+  <rect x="545" y="220" width="175" height="130" fill="#0A1820" rx="2"/>
+  <rect x="545" y="220" width="175" height="130" fill="#D5A548" opacity="0.1" rx="2" filter="url(#blur2)"/>
+  <line x1="632" y1="220" x2="632" y2="350" stroke="#0E2030" stroke-width="3"/>
+  <line x1="545" y1="285" x2="720" y2="285" stroke="#0E2030" stroke-width="2"/>
+
+  <!-- UPPER FLOOR WINDOWS -->
+  <rect x="200" y="370" width="70" height="45" fill="#0A1820" rx="2"/>
+  <rect x="200" y="370" width="70" height="45" fill="#D5A548" opacity="0.14" rx="2"/>
+  <rect x="310" y="365" width="100" height="50" fill="#0A1820" rx="2"/>
+  <rect x="310" y="365" width="100" height="50" fill="#D5A548" opacity="0.1" rx="2"/>
+  <rect x="490" y="365" width="100" height="50" fill="#0A1820" rx="2"/>
+  <rect x="490" y="365" width="100" height="50" fill="#D5A548" opacity="0.08" rx="2"/>
+  <rect x="630" y="370" width="70" height="45" fill="#0A1820" rx="2"/>
+  <rect x="630" y="370" width="70" height="45" fill="#D5A548" opacity="0.13" rx="2"/>
+
+  <!-- Front door -->
+  <rect x="415" y="355" width="70" height="75" fill="#0A1820" rx="3"/>
+  <rect x="416" y="356" width="68" height="73" fill="#D5A548" opacity="0.2" rx="2"/>
+  <circle cx="449" cy="395" r="4" fill="#D5A548" opacity="0.8"/>
+
+  <!-- Entry steps -->
+  <rect x="405" y="425" width="90" height="6" fill="#0D1F2A"/>
+  <rect x="400" y="429" width="100" height="6" fill="#0A1820"/>
+
+  <!-- Architectural accent lines -->
+  <rect x="160" y="425" width="580" height="4" fill="#253E4D"/>
+
+  <!-- Ground reflection / driveway -->
+  <rect x="140" y="430" width="620" height="120" fill="#0C1A22" opacity="0.9"/>
+  <!-- Driveway path lines -->
+  <line x1="360" y1="430" x2="340" y2="550" stroke="#131F2A" stroke-width="2"/>
+  <line x1="540" y1="430" x2="560" y2="550" stroke="#131F2A" stroke-width="2"/>
+
+  <!-- Window amber reflection on ground -->
+  <ellipse cx="260" cy="440" rx="100" ry="12" fill="#D5A548" opacity="0.05" filter="url(#blur5)"/>
+  <ellipse cx="640" cy="440" rx="90" ry="12" fill="#D5A548" opacity="0.05" filter="url(#blur5)"/>
+
+  <!-- Subtle sub-slab airflow streams -->
+  <g opacity="0.35">
+    <path d="M 200 500 Q 260 470, 320 490 T 450 480 T 600 490 T 700 470" fill="none" stroke="url(#tealGlow)" stroke-width="2.5" stroke-dasharray="12,8"/>
+    <path d="M 180 520 Q 270 495, 380 510 T 520 500 T 660 510 T 720 490" fill="none" stroke="url(#tealGlow)" stroke-width="1.5" stroke-dasharray="8,10"/>
+    <circle cx="280" cy="490" r="4" fill="#4D9694" opacity="0.5"/>
+    <circle cx="450" cy="480" r="5" fill="#D5A548" opacity="0.4"/>
+    <circle cx="620" cy="488" r="4" fill="#4D9694" opacity="0.5"/>
+  </g>
+
+  <!-- Landscape lighting / path lights -->
+  <g>
+    <circle cx="370" cy="432" r="3" fill="#D5A548" opacity="0.7"/>
+    <ellipse cx="370" cy="435" rx="8" ry="5" fill="#D5A548" opacity="0.15" filter="url(#blur2)"/>
+    <circle cx="530" cy="432" r="3" fill="#D5A548" opacity="0.7"/>
+    <ellipse cx="530" cy="435" rx="8" ry="5" fill="#D5A548" opacity="0.15" filter="url(#blur2)"/>
+  </g>
+
+  <!-- Teal accent architectural lighting strip at foundation -->
+  <rect x="160" y="426" width="580" height="2" fill="#397A78" opacity="0.5"/>
+  <rect x="160" y="426" width="580" height="6" fill="#397A78" opacity="0.08" filter="url(#blur2)"/>
+
+  <!-- Exterior wall sconce lights -->
+  <circle cx="390" cy="235" r="4" fill="#D5A548" opacity="0.8"/>
+  <ellipse cx="390" cy="240" rx="12" ry="8" fill="#D5A548" opacity="0.2" filter="url(#blur2)"/>
+  <circle cx="510" cy="235" r="4" fill="#D5A548" opacity="0.8"/>
+  <ellipse cx="510" cy="240" rx="12" ry="8" fill="#D5A548" opacity="0.2" filter="url(#blur2)"/>
+
+  <!-- Brand watermark subtle -->
+  <text x="450" y="590" fill="#FFFFFF" fill-opacity="0.15" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle" letter-spacing="4">RADENZA • ENVIRONMENTAL SCIENCE • BUILDING SAFETY</text>
+</svg>

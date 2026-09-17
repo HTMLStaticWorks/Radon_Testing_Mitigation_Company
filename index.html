@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radenza | Radon Testing & Mitigation</title>
+  <meta name="description" content="Professional radon testing, mitigation and post-mitigation re-testing services designed to help property owners understand and address indoor radon levels.">
+  <meta property="og:title" content="Radenza | Radon Testing & Mitigation">
+  <meta property="og:description" content="Scientific, precise and calm property radon measurement and active mitigation engineering.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- GLOBAL STICKY NAVBAR -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Radenza Radon Testing Home">
+        <!-- Luxury SVG Logo: Geometric R Monogram + Radon Detection Sensor + Environmental Airflow Arc -->
+        <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="radenzaTealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#397A78"/>
+              <stop offset="100%" stop-color="#1E4745"/>
+            </linearGradient>
+            <linearGradient id="radenzaBrightTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4CB8B4"/>
+              <stop offset="100%" stop-color="#397A78"/>
+            </linearGradient>
+            <linearGradient id="radenzaAmberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FCD566"/>
+              <stop offset="100%" stop-color="#D5A548"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 1. Geometric Outer Shield Base -->
+          <path d="M 50 6 L 86 26.5 A 3 3 0 0 1 88 29 L 88 71 A 3 3 0 0 1 86 73.5 L 50 94 A 3 3 0 0 1 47 94 L 14 73.5 A 3 3 0 0 1 12 71 L 12 29 A 3 3 0 0 1 14 26.5 Z" 
+                fill="url(#radenzaTealGrad)" fill-opacity="0.08" stroke="currentColor" stroke-width="2.5" stroke-opacity="0.35"/>
+
+          <!-- 2. Monogram "R" Loop with Native Cutout (evenodd) -->
+          <path d="M 28 22 H 54 C 67 22 75 30 75 40 C 75 50 67 58 54 58 H 38 V 78 C 38 79.5 36.5 80 35 80 H 31 C 29.5 80 28 79.5 28 78 V 22 Z M 38 31 V 49 H 52 C 59 49 65 45 65 40 C 65 35 59 31 52 31 H 38 Z" 
+                fill-rule="evenodd" fill="url(#radenzaBrightTeal)"/>
+
+          <!-- 3. Dynamic Mitigation Ribbon Leg -->
+          <path d="M 48 50 L 68 76 C 69.5 78 72 79.5 75.5 79.5 H 77.5 C 78.5 79.5 79 78.5 78 77 L 57 50 H 48 Z" 
+                fill="url(#radenzaBrightTeal)"/>
+
+          <!-- 4. Safety Amber Radar Core -->
+          <circle cx="52" cy="40" r="5" fill="url(#radenzaAmberGrad)"/>
+          <circle cx="52" cy="40" r="8.5" fill="none" stroke="#D5A548" stroke-width="1.5" stroke-dasharray="2.5 2.5" opacity="0.85"/>
+
+          <!-- 5. Environmental Airflow Arc -->
+          <path d="M 72 18 C 82 28 85 43 81 57" fill="none" stroke="url(#radenzaAmberGrad)" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text-wrap">
+          <span class="brand-name">RADENZA</span>
+          <span class="brand-desc">RADON TESTING &amp; MITIGATION</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions Right -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle dark mode">
+          <span class="theme-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+        </button>
+
+        <button class="rtl-toggle-btn" aria-label="Toggle RTL layout">
+          <span class="rtl-label">RTL</span>
+        </button>
+
+        <button class="btn btn-primary" data-modal-target="testingModal">Book a Test &rarr;</button>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER MENU OVERLAY -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay">
+    <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile menu navigation">
+      <div class="drawer-header">
+        <div class="brand-text-wrap">
+          <span class="brand-name">RADENZA</span>
+          <span class="brand-desc">RADON TESTING &amp; MITIGATION</span>
+        </div>
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+      </div>
+
+      <ul class="drawer-nav-links">
+        <li><a href="index.html" class="drawer-nav-link">Home</a></li>
+        <li><a href="index2.html" class="drawer-nav-link">Home 2</a></li>
+        <li><a href="services.html" class="drawer-nav-link">Services</a></li>
+        <li><a href="faq.html" class="drawer-nav-link">FAQ</a></li>
+        <li><a href="pricing.html" class="drawer-nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="drawer-nav-link">Contact</a></li>
+      </ul>
+
+      <div class="drawer-actions">
+        <div class="drawer-controls">
+          <button class="theme-toggle-btn" aria-label="Toggle dark mode">
+            <span class="theme-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </span>
+          </button>
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL layout">
+            <span class="rtl-label">RTL</span>
+          </button>
+        </div>
+        <button class="btn btn-primary" data-modal-target="testingModal" style="width: 100%;">Book a Test &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- HOME — SECTION 01 — HERO -->
+    <section class="section hero-section" style="position: relative; overflow: hidden; padding-top: 0; padding-bottom: 0;">
+      <canvas id="airflowCanvas" style="position: absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; opacity: 0.7;"></canvas>
+
+      <div class="container">
+        <div class="hero-wrapper">
+          <div class="hero-content-col reveal-on-scroll">
+            <div class="hero-eyebrow">
+              <span class="mono-tag">INDOOR AIR • BUILDING SAFETY • RADON</span>
+            </div>
+            <h1 class="hero-title">Know What's in the Air Beneath Your Home.</h1>
+            <p class="hero-subtitle">
+              Professional radon testing and mitigation solutions designed to help property owners understand indoor radon levels and take informed next steps.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" data-modal-target="testingModal">Book a Radon Test &rarr;</button>
+              <a href="services.html" class="btn btn-secondary">Learn About Radon</a>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.75rem 1rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); padding-top: 1rem; border-top: 1px solid var(--border-subtle); width: 100%;">
+              <span style="color: var(--brand-amber); font-weight: 700;">● RADON TESTING</span>
+              <span>MEASURE • DOCUMENT • UNDERSTAND</span>
+            </div>
+          </div>
+
+          <div class="hero-visual-col reveal-on-scroll">
+            <div class="hero-visual-card">
+              <img src="assets/images/1.png" alt="Modern luxury property cutaway and sub-slab diagnostic sampling" class="hero-visual-img" loading="eager" style="width: 100%; height: 420px; object-fit: cover; border-radius: var(--radius-md);">
+              
+              <!-- Illustrative Technical Measurement Overlay -->
+              <div class="tech-indicator-overlay">
+                <div class="tech-indicator-header">
+                  <span>SENSOR MATRIX [ILLUSTRATIVE READING]</span>
+                  <div class="sensor-pulse-dot"></div>
+                </div>
+                <div class="indicator-grid">
+                  <div class="indicator-box">
+                    <span class="indicator-label">SAMPLING STATUS</span>
+                    <span class="indicator-value" style="color: var(--brand-teal-light);">ACTIVE</span>
+                  </div>
+                  <div class="indicator-box">
+                    <span class="indicator-label">TEST PROTOCOL</span>
+                    <span class="indicator-value">48-HR CRM</span>
+                  </div>
+                  <div class="indicator-box">
+                    <span class="indicator-label">MONITORING</span>
+                    <span class="indicator-value" style="color: var(--brand-amber);">CONTINUOUS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME — SECTION 02 — WHAT IS RADON? -->
+    <section class="section section-pale">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">BUILDING SCIENCE &amp; SOIL GAS</span>
+          <h2 style="margin: 0.75rem 0 1rem 0;">Radon Is Invisible. Testing Makes It Measurable.</h2>
+          <p>
+            Radon is a naturally occurring gas formed by the breakdown of trace minerals in rock and soil beneath buildings. Because it is odorless and invisible, standard indoor air quality testing provides clear property data.
+          </p>
+        </div>
+
+        <div class="radon-diagram-wrapper">
+          <div class="diagram-canvas-container reveal-on-scroll">
+            <img src="assets/images/2.png" alt="Sub-slab soil gas diagnostic sampling and foundation entry paths" style="width: 100%; height: 380px; object-fit: cover; border-radius: var(--radius-md); box-shadow: var(--shadow-md); display: block;">
+          </div>
+
+          <div class="reveal-on-scroll">
+            <div class="diagram-info-markers">
+              <div class="info-marker-item">
+                <span class="marker-badge">INVISIBLE</span>
+                <div>
+                  <h4 style="margin-bottom: 0.25rem;">Cannot Be Detected by Senses</h4>
+                  <p style="font-size: 0.9rem;">Radon gas has no odor, color, or taste, requiring calibrated continuous monitors or analytical detectors.</p>
+                </div>
+              </div>
+
+              <div class="info-marker-item">
+                <span class="marker-badge">VARIABLE</span>
+                <div>
+                  <h4 style="margin-bottom: 0.25rem;">Differs Between Properties</h4>
+                  <p style="font-size: 0.9rem;">Building foundation design, soil permeability, and ventilation rates create unique indoor conditions for every structure.</p>
+                </div>
+              </div>
+
+              <div class="info-marker-item">
+                <span class="marker-badge">TESTABLE</span>
+                <div>
+                  <h4 style="margin-bottom: 0.25rem;">Precise Measurement Available</h4>
+                  <p style="font-size: 0.9rem;">Standard testing protocols provide accurate data on property-specific radon concentrations over defined timeframes.</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+              <a href="services.html" class="btn btn-secondary">How Radon Testing Works &rarr;</a>
+            </div>
+
+            <div class="disclaimer-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D5A548" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span>Educational Note: Measured radon levels should be evaluated using applicable regional public-health guidelines and professional technical recommendations.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME — SECTION 03 — WHY TESTING MATTERS -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">EVIDENCE-BASED SAFETY</span>
+          <h2 style="margin: 0.75rem 0 1rem 0;">You Can't Judge Radon Levels by Looking at a Building.</h2>
+          <p>Two identical adjacent homes can have vastly different radon concentrations due to subsurface geology and sub-slab pressure dynamics.</p>
+        </div>
+
+        <div class="storyline-stages">
+          <div class="stage-card reveal-on-scroll">
+            <div class="stage-num">01</div>
+            <h3 style="margin-bottom: 0.75rem;">No Assumptions</h3>
+            <p style="font-size: 0.95rem;">A building's age, luxury architectural finish, or neighborhood location does not indicate its subsurface soil gas migration rate.</p>
+          </div>
+
+          <div class="stage-card reveal-on-scroll">
+            <div class="stage-num">02</div>
+            <h3 style="margin-bottom: 0.75rem;">Measure</h3>
+            <p style="font-size: 0.95rem;">Deploying calibrated CRM continuous monitors or passive canisters documents measured indoor radon concentration accurately.</p>
+          </div>
+
+          <div class="stage-card reveal-on-scroll">
+            <div class="stage-num">03</div>
+            <h3 style="margin-bottom: 0.75rem;">Decide</h3>
+            <p style="font-size: 0.95rem;">With verified test data in hand, property owners can evaluate whether active mitigation or routine follow-up re-testing is appropriate.</p>
+          </div>
+        </div>
+
+        <!-- Featured Inspection Photo Showcase -->
+        <div class="reveal-on-scroll" style="margin-top: 2.5rem;">
+          <img src="assets/images/3.png" alt="Active radon mitigation suction system and pressure manometer equipment" style="width: 100%; max-height: 380px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); display: block;">
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME — SECTION 04 — HOW THE PROCESS WORKS -->
+    <section class="section section-pale">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">STANDARD OPERATING PROCEDURE</span>
+          <h2 style="margin: 0.75rem 0 1rem 0;">From First Test to Verified Mitigation</h2>
+          <p>Our structured technical workflow ensures every property assessment follows clear, scientific inspection steps.</p>
+        </div>
+
+        <div class="vertical-timeline">
+          <div class="timeline-step-item reveal-on-scroll">
+            <div class="timeline-step-dot"></div>
+            <div class="timeline-content-card">
+              <div class="step-header">
+                <span class="step-tag">STEP 01</span>
+                <h3>Assess Property &amp; Scope</h3>
+              </div>
+              <p>Review building foundation type (basement, slab, crawlspace), ventilation systems, and specific testing guidelines.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step-item reveal-on-scroll">
+            <div class="timeline-step-dot"></div>
+            <div class="timeline-content-card">
+              <div class="step-header">
+                <span class="step-tag">STEP 02</span>
+                <h3>Deploy Measurement Equipment</h3>
+              </div>
+              <p>Place calibrated continuous radon monitors (CRM) or passive devices in lowest lived-in areas according to standard testing placement rules.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step-item reveal-on-scroll">
+            <div class="timeline-step-dot"></div>
+            <div class="timeline-content-card">
+              <div class="step-header">
+                <span class="step-tag">STEP 03</span>
+                <h3>Review &amp; Interpret Results</h3>
+              </div>
+              <p>Retrieve test data and generate a clear, factual report outlining measured concentrations in context with standard guidance.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step-item reveal-on-scroll">
+            <div class="timeline-step-dot"></div>
+            <div class="timeline-content-card">
+              <div class="step-header">
+                <span class="step-tag">STEP 04</span>
+                <h3>Mitigate (If Appropriate)</h3>
+              </div>
+              <p>Design and install a sub-slab active depressurization (SSD) system tailored to building architecture where reduced levels are desired.</p>
+            </div>
+          </div>
+
+          <div class="timeline-step-item reveal-on-scroll">
+            <div class="timeline-step-dot"></div>
+            <div class="timeline-content-card">
+              <div class="step-header">
+                <span class="step-tag">STEP 05</span>
+                <h3>Post-Mitigation Re-Test</h3>
+              </div>
+              <p>Conduct follow-up verification testing to confirm mitigation system performance and operational effectiveness.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME — SECTION 05 — RADON RISK EDUCATION DIAGRAM -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">BUILDING ENVELOPE DIAGNOSTICS</span>
+          <h2 style="margin: 0.75rem 0 1rem 0;">What Can Affect Indoor Radon Levels?</h2>
+          <p>Sub-slab pressure variations, foundation penetrations, and soil characteristics can create entry pathways. Click interactive hotspots below to explore details.</p>
+        </div>
+
+        <div class="building-interactive-container reveal-on-scroll">
+          <img src="assets/images/4.png" alt="Interactive building cross section showing foundation entry routes" style="width: 100%; height: 440px; object-fit: cover; border-radius: var(--radius-md); display: block;">
+
+          <!-- Hotspots -->
+          <button class="hotspot-button" style="top: 75%; left: 20%;" data-title="Foundation Slab" data-desc="Concrete porosity and sub-slab soil pressure may provide a pathway for soil gas entry." aria-label="Foundation Slab Info">1</button>
+          <button class="hotspot-button" style="top: 68%; left: 45%;" data-title="Floor &amp; Wall Joints" data-desc="Expansion joints between basement floors and foundation walls are potential pathways." aria-label="Floor Joints Info">2</button>
+          <button class="hotspot-button" style="top: 80%; left: 70%;" data-title="Sump Pits &amp; Drains" data-desc="Open sump basins or unsealed floor drains offer direct routes from sub-slab soil." aria-label="Sump Pits Info">3</button>
+          <button class="hotspot-button" style="top: 55%; left: 82%;" data-title="Utility Penetrations" data-desc="Unsealed openings around plumbing or electrical conduit lines can permit soil gas flow." aria-label="Utility Lines Info">4</button>
+
+          <!-- Interactive Tooltip Overlay -->
+          <div class="hotspot-tooltip" id="hotspotTooltipBox">
+            <div class="hotspot-tooltip-title">Interactive Element</div>
+            <div class="hotspot-tooltip-desc" style="font-size: 0.85rem; color: rgba(255,255,255,0.85);">Select a marker on the diagram to inspect building pathways.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME — SECTION 05B — UNIQUE INTERACTIVE PFE VACUUM SIMULATOR -->
+    <section class="section" style="background: var(--bg-surface-elevated);">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag" style="color: var(--brand-teal);">DIAGNOSTIC SIMULATOR</span>
+          <h2 style="margin: 0.75rem 0 1rem 0;">Pressure Field Extension (PFE) Simulator</h2>
+          <p style="max-width: 720px; margin: 0 auto;">Simulate how active soil depressurization creates negative pressure gradients across sub-slab soil to prevent radon gas entry into living spaces.</p>
+        </div>
+
+        <div class="pfe-simulator-container reveal-on-scroll">
+          <div class="pfe-simulator-grid">
+            <!-- Left Controls & Live Metrics -->
+            <div>
+              <span class="mono-tag" style="color: var(--brand-amber); font-size: 0.75rem;">SELECT MITIGATION MODE</span>
+              <div class="pfe-mode-selector">
+                <button class="pfe-mode-btn active" data-mode="passive">
+                  <span>1. Baseline Passive (No Fan)</span>
+                  <span style="font-family: var(--font-mono); font-size: 0.75rem; background: rgba(255,255,255,0.1); padding: 0.2rem 0.5rem; border-radius: 4px;">0.00 in. W.C.</span>
+                </button>
+                <button class="pfe-mode-btn" data-mode="single">
+                  <span>2. Active Single-Point Suction</span>
+                  <span style="font-family: var(--font-mono); font-size: 0.75rem; background: rgba(57,122,120,0.3); color: var(--brand-teal); padding: 0.2rem 0.5rem; border-radius: 4px;">-0.085 in. W.C.</span>
+                </button>
+                <button class="pfe-mode-btn" data-mode="dual">
+                  <span>3. High-Performance Dual-Pit</span>
+                  <span style="font-family: var(--font-mono); font-size: 0.75rem; background: rgba(230,161,0,0.2); color: var(--brand-amber); padding: 0.2rem 0.5rem; border-radius: 4px;">-0.185 in. W.C.</span>
+                </button>
+              </div>
+
+              <div class="pfe-metrics-grid">
+                <div class="pfe-metric-card">
+                  <span class="pfe-metric-label">VACUUM PRESSURE</span>
+                  <div class="pfe-metric-value" id="pfeVacuumVal">0.000</div>
+                  <span style="font-size: 0.7rem; color: var(--text-muted);">in. W.C.</span>
+                </div>
+                <div class="pfe-metric-card">
+                  <span class="pfe-metric-label">AIRFLOW VELOCITY</span>
+                  <div class="pfe-metric-value" id="pfeAirflowVal">0</div>
+                  <span style="font-size: 0.7rem; color: var(--text-muted);">CFM</span>
+                </div>
+                <div class="pfe-metric-card">
+                  <span class="pfe-metric-label">SOIL GAS REDUCTION</span>
+                  <div class="pfe-metric-value" id="pfeReductionVal">0%</div>
+                  <span style="font-size: 0.7rem; color: var(--text-muted);">Efficiency</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Interactive Dynamic Panel -->
+            <div class="pfe-canvas-box">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--brand-teal); font-weight: 700;">LIVE SUB-SLAB SCHEMATIC</span>
+                <span id="pfeStatusBadge" style="font-family: var(--font-mono); font-size: 0.7rem; background: rgba(220,53,69,0.2); color: #ff6b6b; padding: 0.2rem 0.6rem; border-radius: 12px; border: 1px solid rgba(220,53,69,0.4);">PASSTHROUGH INACTIVE</span>
+              </div>
+
+              <!-- High-Res Diagnostic Graphic Image 5.png with Interactive SVG Overlay -->
+              <div style="position: relative; overflow: hidden; border-radius: var(--radius-sm); border: 1px solid rgba(57,122,120,0.4); margin-bottom: 1rem;">
+                <img src="assets/images/5.png" alt="Live sub-slab Pressure Field Extension diagnostic schematic" style="width: 100%; height: 240px; object-fit: cover; display: block;">
+
+                <!-- Vector Flow & Glow SVG Overlay -->
+                <svg id="pfeSchematicSvg" viewBox="0 0 500 240" style="position: absolute; top:0; left:0; width: 100%; height: 100%; display: block; pointer-events: none; overflow: visible;">
+                  <defs>
+                    <radialGradient id="vacuumGlow" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#397A78" stop-opacity="0.85"/>
+                      <stop offset="100%" stop-color="#397A78" stop-opacity="0"/>
+                    </radialGradient>
+                  </defs>
+
+                  <!-- Dynamic Vacuum Aura -->
+                  <circle id="pfeVacuumAura" cx="250" cy="140" r="15" fill="url(#vacuumGlow)" style="transition: all 0.5s ease; opacity: 0;"/>
+
+                  <!-- Vacuum Flow Field Lines -->
+                  <g id="pfeFlowLines" stroke="var(--brand-teal)" stroke-width="2.5" fill="none" stroke-dasharray="6,4" style="opacity: 0; transition: opacity 0.5s ease;">
+                    <path class="pfe-flow-path" d="M 60 160 Q 150 150 240 140"/>
+                    <path class="pfe-flow-path" d="M 440 160 Q 350 150 260 140"/>
+                    <path class="pfe-flow-path" d="M 120 185 Q 185 160 245 145"/>
+                    <path class="pfe-flow-path" d="M 380 185 Q 315 160 255 145"/>
+                  </g>
+                </svg>
+              </div>
+
+              <!-- Diagnostic Probes Readout Bar -->
+              <div class="pfe-probe-readout">
+                <div class="pfe-probe-badge">
+                  <span style="color: var(--text-muted); display: block;">PROBE A (WEST)</span>
+                  <strong id="probeAVal" style="color: var(--brand-amber);">0.000 in. W.C.</strong>
+                </div>
+                <div class="pfe-probe-badge">
+                  <span style="color: var(--text-muted); display: block;">PIT PRESSURE</span>
+                  <strong id="pitVal" style="color: var(--brand-teal);">0.000 in. W.C.</strong>
+                </div>
+                <div class="pfe-probe-badge">
+                  <span style="color: var(--text-muted); display: block;">PROBE B (EAST)</span>
+                  <strong id="probeBVal" style="color: var(--brand-amber);">0.000 in. W.C.</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME — SECTION 05C — VERIFIED CLIENT TESTIMONIALS -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag" style="color: var(--brand-amber);">CLIENT VERIFICATION &amp; REVIEWS</span>
+          <h2 style="margin: 0.75rem 0 1rem 0;">Trusted by Property Owners Across the Region</h2>
+          <p style="max-width: 700px; margin: 0 auto;">Read verified case studies and feedback from homeowners, commercial facility directors, and real estate professionals.</p>
+          
+          <!-- Category Filter Pills -->
+          <div class="testimonial-filter-tabs">
+            <button class="testimonial-tab-btn active" data-filter="all">All Case Studies</button>
+            <button class="testimonial-tab-btn" data-filter="residential">Residential Homes</button>
+            <button class="testimonial-tab-btn" data-filter="commercial">Commercial Buildings</button>
+            <button class="testimonial-tab-btn" data-filter="realestate">Real Estate Closing</button>
+          </div>
+        </div>
+
+        <div class="testimonial-grid reveal-on-scroll" id="testimonialGrid">
+          <!-- Card 1: Residential -->
+          <div class="testimonial-card" data-category="residential">
+            <span class="testimonial-quote-icon">&ldquo;</span>
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <div class="testimonial-metrics-badge">
+                <span style="color: var(--brand-amber); font-weight: 700;">PRE: 16.4 pCi/L</span>
+                <span style="color: var(--text-muted);">&rarr;</span>
+                <span style="color: var(--brand-teal); font-weight: 700;">POST: 0.6 pCi/L</span>
+              </div>
+              <p class="testimonial-text">&ldquo;RADENZA performed diagnostic continuous monitoring during our home purchase inspection. Their sub-slab depressurization system brought our basement levels down from 16.4 to under 1 pCi/L within 24 hours of activation.&rdquo;</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">EV</div>
+              <div>
+                <h4 class="testimonial-author-name">Eleanor Vance</h4>
+                <p class="testimonial-author-role">Single Family Homeowner &bull; Oakridge Manor</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Commercial -->
+          <div class="testimonial-card" data-category="commercial">
+            <span class="testimonial-quote-icon">&ldquo;</span>
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <div class="testimonial-metrics-badge">
+                <span style="color: var(--brand-amber); font-weight: 700;">PRE: 22.1 pCi/L</span>
+                <span style="color: var(--text-muted);">&rarr;</span>
+                <span style="color: var(--brand-teal); font-weight: 700;">POST: 0.9 pCi/L</span>
+              </div>
+              <p class="testimonial-text">&ldquo;Managing a 40,000 sq ft office facility required specialized PFE vacuum testing across 4 independent sub-slab zones. RADENZA delivered full compliance reporting and a multi-pit mitigation design with zero downtime.&rdquo;</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: var(--brand-amber);">MT</div>
+              <div>
+                <h4 class="testimonial-author-name">Marcus Thorne</h4>
+                <p class="testimonial-author-role">VP Facilities &bull; Apex Tech Complex</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Real Estate -->
+          <div class="testimonial-card" data-category="realestate">
+            <span class="testimonial-quote-icon">&ldquo;</span>
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <div class="testimonial-metrics-badge">
+                <span style="color: var(--brand-amber); font-weight: 700;">PRE: 8.8 pCi/L</span>
+                <span style="color: var(--text-muted);">&rarr;</span>
+                <span style="color: var(--brand-teal); font-weight: 700;">POST: 0.8 pCi/L</span>
+              </div>
+              <p class="testimonial-text">&ldquo;As a real estate broker, turnaround speed and certified EPA compliance reports are paramount. RADENZA installed an exterior side-wall suction system and completed verification re-testing in 48 hours for closing.&rdquo;</p>
+            </div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background: #4A5568;">SL</div>
+              <div>
+                <h4 class="testimonial-author-name">Sophia Laurier</h4>
+                <p class="testimonial-author-role">Managing Broker &bull; Laurier Real Estate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME — SECTION 06 — FINAL CTA -->
+    <section class="section section-dark">
+      <div class="container text-center reveal-on-scroll">
+        <span class="mono-tag" style="color: var(--brand-amber);">TAKE THE NEXT STEP</span>
+        <h2 style="margin: 1rem 0 1.25rem 0; color: #FFFFFF;">Start with Information. Then Decide What Comes Next.</h2>
+        <p style="max-width: 650px; margin: 0 auto 2.5rem auto;">
+          A professional radon test provides clear property data so you can evaluate indoor air quality with scientific confidence.
+        </p>
+        <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
+          <button class="btn btn-amber" data-modal-target="testingModal">Book a Radon Test &rarr;</button>
+          <a href="services.html" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.3); color: #FFFFFF;">Explore Services</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- UNIVERSAL MODALS -->
+  <!-- 1. Book a Radon Test Modal -->
+  <div class="modal-overlay" id="testingModal" role="dialog" aria-modal="true" aria-labelledby="testModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <span class="mono-tag">SCHEDULE ASSESSMENT</span>
+        <h3 id="testModalTitle" style="margin-top: 0.4rem;">Book a Radon Test</h3>
+      </div>
+      <form class="modal-form">
+        <div class="modal-form-body">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" required placeholder="Jane Doe">
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" required placeholder="jane@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" required placeholder="+1 (555) 000-0000">
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Property Type</label>
+              <select class="form-control" required>
+                <option value="Single Family">Single Family Home</option>
+                <option value="Condo">Apartment / Condo</option>
+                <option value="Commercial">Commercial Building</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Preferred Date</label>
+              <input type="date" class="form-control" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Continue &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Request Mitigation Quote Modal -->
+  <div class="modal-overlay" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <span class="mono-tag">SYSTEM PLANNING</span>
+        <h3 id="quoteModalTitle" style="margin-top: 0.4rem;">Request Mitigation Quote</h3>
+      </div>
+      <form class="modal-form">
+        <div class="modal-form-body">
+          <div class="form-group">
+            <label class="form-label">Property Type</label>
+            <select class="form-control" required>
+              <option value="Single Family">Single Family Residence</option>
+              <option value="Multi-Family">Multi-Family Structure</option>
+              <option value="Commercial">Commercial / Office</option>
+            </select>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Foundation Type</label>
+              <select class="form-control" required>
+                <option value="Basement">Basement</option>
+                <option value="Slab">Slab-on-Grade</option>
+                <option value="Crawlspace">Crawlspace</option>
+                <option value="Mixed">Mixed Foundation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Approx Size (sq ft)</label>
+              <input type="number" class="form-control" placeholder="e.g. 2400">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">ZIP / Postal Code</label>
+            <input type="text" class="form-control" required placeholder="12345">
+          </div>
+          <button type="submit" class="btn btn-amber" style="width: 100%; margin-top: 1rem;">Request Estimate &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem; display: inline-flex;" aria-label="Radenza Home">
+            <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="footerTealGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#4CB8B4"/>
+                  <stop offset="100%" stop-color="#397A78"/>
+                </linearGradient>
+                <linearGradient id="footerAmberGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FCD566"/>
+                  <stop offset="100%" stop-color="#D5A548"/>
+                </linearGradient>
+              </defs>
+              <path d="M 50 6 L 86 26.5 A 3 3 0 0 1 88 29 L 88 71 A 3 3 0 0 1 86 73.5 L 50 94 A 3 3 0 0 1 47 94 L 14 73.5 A 3 3 0 0 1 12 71 L 12 29 A 3 3 0 0 1 14 26.5 Z" 
+                    fill="url(#footerTealGrad1)" fill-opacity="0.12" stroke="#4CB8B4" stroke-width="2.5" stroke-opacity="0.5"/>
+              <path d="M 28 22 H 54 C 67 22 75 30 75 40 C 75 50 67 58 54 58 H 38 V 78 C 38 79.5 36.5 80 35 80 H 31 C 29.5 80 28 79.5 28 78 V 22 Z M 38 31 V 49 H 52 C 59 49 65 45 65 40 C 65 35 59 31 52 31 H 38 Z" 
+                    fill-rule="evenodd" fill="url(#footerTealGrad1)"/>
+              <path d="M 48 50 L 68 76 C 69.5 78 72 79.5 75.5 79.5 H 77.5 C 78.5 79.5 79 78.5 78 77 L 57 50 H 48 Z" 
+                    fill="url(#footerTealGrad1)"/>
+              <circle cx="52" cy="40" r="5" fill="url(#footerAmberGrad1)"/>
+              <circle cx="52" cy="40" r="8.5" fill="none" stroke="#D5A548" stroke-width="1.5" stroke-dasharray="2.5 2.5" opacity="0.85"/>
+              <path d="M 72 18 C 82 28 85 43 81 57" fill="none" stroke="url(#footerAmberGrad1)" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div class="brand-text-wrap">
+              <span class="brand-name" style="color: #FFFFFF;">RADENZA</span>
+              <span class="brand-desc" style="color: #94A6AE;">RADON TESTING &amp; MITIGATION</span>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem;">
+            Professional residential and commercial radon measurement, mitigation system design, and post-mitigation verification services.
+          </p>
+
+          <!-- Social Media Icons Bar -->
+          <div style="display: flex; gap: 0.65rem; margin-top: 1.25rem;">
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter / X Profile" title="Twitter / X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Facebook Page" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube Channel" title="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram Profile" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>EXPLORE</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index2.html">Home 2 (Monitoring)</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="pricing.html">Pricing Guide</a></li>
+            <li><a href="contact.html">Contact &amp; Booking</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>SERVICES</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Radon Testing</a></li>
+            <li><a href="services.html">Radon Mitigation</a></li>
+            <li><a href="services.html">Re-Testing Verification</a></li>
+            <li><a href="services.html">Property Assessment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>CONTACT</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Phone: +1 (800) 555-RADON</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Email: hello@radenza-demo.com</p>
+          <p style="font-size: 0.85rem;">Mon - Fri: 8:00 AM – 6:00 PM</p>
+        </div>
+
+        <div>
+          <h4>AIR SAFETY TIPS</h4>
+          <p style="font-size: 0.85rem;">Subscribe for non-alarmist practical building indoor air safety guidance.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Radenza educational updates.');">
+            <input type="email" class="newsletter-input" placeholder="Enter email..." required>
+            <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem;">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 RADENZA. All rights reserved. Professional Radon Testing &amp; Mitigation.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" style="position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; border-radius: 50%; background: var(--brand-teal); color: #FFF; border: none; cursor: pointer; opacity: 0; pointer-events: none; transition: all 0.3s; z-index: 999; display: flex; align-items: center; justify-content: center;" aria-label="Back to top">
+    &uarr;
+  </button>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/services.js"></script>
+  <script src="assets/js/faq.js"></script>
+  <script src="assets/js/booking.js"></script>
+</body>
+</html>

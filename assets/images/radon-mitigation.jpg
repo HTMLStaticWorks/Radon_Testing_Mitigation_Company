@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F1E28"/>
+      <stop offset="50%" stop-color="#17252B"/>
+      <stop offset="100%" stop-color="#1E3040"/>
+    </linearGradient>
+    <linearGradient id="pipeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2D4F60"/>
+      <stop offset="50%" stop-color="#3D6070"/>
+      <stop offset="100%" stop-color="#2D4F60"/>
+    </linearGradient>
+    <radialGradient id="fanGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D5A548" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#D5A548" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="600" fill="url(#bg)"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#2D414B" stroke-width="0.5" opacity="0.3">
+    <line x1="0" y1="150" x2="900" y2="150"/>
+    <line x1="0" y1="300" x2="900" y2="300"/>
+    <line x1="0" y1="450" x2="900" y2="450"/>
+    <line x1="225" y1="0" x2="225" y2="600"/>
+    <line x1="450" y1="0" x2="450" y2="600"/>
+    <line x1="675" y1="0" x2="675" y2="600"/>
+  </g>
+
+  <!-- BUILDING CROSS SECTION -->
+  <!-- Soil layer -->
+  <rect x="80" y="490" width="740" height="90" fill="#0A1420" rx="4"/>
+  <text x="450" y="540" fill="#4D6678" font-family="monospace" font-size="13" text-anchor="middle">SUBSURFACE SOIL · NATURAL RADON SOURCE ZONE</text>
+
+  <!-- Foundation slab -->
+  <rect x="130" y="455" width="640" height="38" fill="#2D4050"/>
+  <text x="450" y="479" fill="#94A6AE" font-family="monospace" font-size="11" text-anchor="middle">CONCRETE FOUNDATION SLAB</text>
+
+  <!-- Building walls -->
+  <rect x="130" y="120" width="18" height="335" fill="#1A3040"/>
+  <rect x="752" y="120" width="18" height="335" fill="#1A3040"/>
+
+  <!-- Building interior -->
+  <rect x="148" y="120" width="604" height="335" fill="#0F1E28" opacity="0.8" stroke="#2D414B" stroke-width="1.5"/>
+
+  <!-- ROOF -->
+  <rect x="115" y="105" width="670" height="20" fill="#0E1F28"/>
+  <rect x="115" y="105" width="670" height="4" fill="#397A78" opacity="0.8"/>
+
+  <!-- Interior room indication -->
+  <text x="280" y="300" fill="#2D414B" font-family="sans-serif" font-size="48" font-weight="bold" text-anchor="middle" opacity="0.3">LIVING</text>
+  <text x="280" y="340" fill="#2D414B" font-family="sans-serif" font-size="36" font-weight="bold" text-anchor="middle" opacity="0.3">SPACE</text>
+
+  <!-- SUB-SLAB SUCTION PIT -->
+  <rect x="405" y="430" width="90" height="60" fill="#0A1820" stroke="#D5A548" stroke-width="2.5" rx="4"/>
+  <text x="450" y="465" fill="#D5A548" font-family="monospace" font-size="9" text-anchor="middle" font-weight="bold">SUCTION PIT</text>
+
+  <!-- AIRFLOW ARROWS from soil up through pit -->
+  <g fill="#4D9694" opacity="0.7">
+    <polygon points="420,500 427,515 413,515"/>
+    <polygon points="445,500 452,515 438,515"/>
+    <polygon points="470,500 477,515 463,515"/>
+  </g>
+
+  <!-- VERTICAL PVC PIPE going up -->
+  <rect x="435" y="160" width="30" height="270" fill="url(#pipeGrad)" rx="6"/>
+  <!-- Pipe highlight -->
+  <rect x="438" y="160" width="6" height="270" fill="#FFFFFF" opacity="0.08" rx="3"/>
+  <!-- Pipe label -->
+  <text x="490" y="300" fill="#94A6AE" font-family="monospace" font-size="11">PVC VENT PIPE</text>
+  <line x1="486" y1="298" x2="467" y2="298" stroke="#647C82" stroke-width="1"/>
+
+  <!-- Horizontal pipe elbow going right -->
+  <rect x="465" y="160" width="220" height="30" fill="url(#pipeGrad)" rx="6"/>
+  <rect x="465" y="163" width="220" height="6" fill="#FFFFFF" opacity="0.08" rx="3"/>
+
+  <!-- FAN UNIT -->
+  <circle cx="685" cy="100" r="42" fill="#1E2E38" stroke="#D5A548" stroke-width="3"/>
+  <circle cx="685" cy="100" r="42" fill="url(#fanGlow)" filter="url(#softBlur)"/>
+  <!-- Fan blades -->
+  <g transform="origin 685 100" opacity="0.8">
+    <ellipse cx="685" cy="100" rx="28" ry="10" fill="none" stroke="#D5A548" stroke-width="3" transform="rotate(0 685 100)"/>
+    <ellipse cx="685" cy="100" rx="28" ry="10" fill="none" stroke="#397A78" stroke-width="2" transform="rotate(60 685 100)"/>
+    <ellipse cx="685" cy="100" rx="28" ry="10" fill="none" stroke="#D5A548" stroke-width="2" transform="rotate(120 685 100)"/>
+  </g>
+  <circle cx="685" cy="100" r="8" fill="#D5A548"/>
+  <text x="685" y="158" fill="#D5A548" font-family="monospace" font-size="11" text-anchor="middle" font-weight="bold">INLINE FAN</text>
+
+  <!-- Discharge pipe going up and out -->
+  <rect x="670" y="25" width="30" height="80" fill="url(#pipeGrad)" rx="6"/>
+  <text x="750" y="55" fill="#94A6AE" font-family="monospace" font-size="11">OUTDOOR DISCHARGE</text>
+  <line x1="746" y1="53" x2="705" y2="53" stroke="#647C82" stroke-width="1"/>
+
+  <!-- Airflow direction arrows in pipe -->
+  <g fill="#4D9694">
+    <polygon points="450,240 444,255 456,255"/>
+    <polygon points="450,200 444,215 456,215"/>
+    <polygon points="450,175 444,190 456,190"/>
+    <polygon points="580,172 565,166 565,178"/>
+    <polygon points="620,172 605,166 605,178"/>
+    <polygon points="660,172 645,166 645,178"/>
+    <polygon points="685,60 679,75 691,75"/>
+    <polygon points="685,38 679,53 691,53"/>
+  </g>
+
+  <!-- Left side labels -->
+  <text x="90" y="200" fill="#647C82" font-family="monospace" font-size="11">INTERIOR</text>
+  <text x="90" y="215" fill="#647C82" font-family="monospace" font-size="11">LIVING</text>
+  <text x="90" y="230" fill="#647C82" font-family="monospace" font-size="11">AREA</text>
+
+  <!-- DISCLAIMER -->
+  <rect x="90" y="560" width="720" height="22" fill="#0A1420" rx="4"/>
+  <text x="450" y="575" fill="#647C82" font-family="monospace" font-size="9" text-anchor="middle">ILLUSTRATIVE DIAGRAM — ACTUAL SYSTEM DESIGN VARIES BY PROPERTY CONDITIONS</text>
+
+  <text x="450" y="598" fill="#FFFFFF" fill-opacity="0.1" font-family="sans-serif" font-size="9" text-anchor="middle" letter-spacing="4">RADENZA ACTIVE DEPRESSURIZATION SYSTEM</text>
+</svg>

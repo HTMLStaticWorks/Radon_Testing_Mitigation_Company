@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Radon Test | Contact Radenza</title>
+  <meta name="description" content="Request a radon testing appointment, mitigation system assessment, or post-mitigation re-testing for your property with Radenza.">
+  <meta property="og:title" content="Book a Radon Test | Radenza">
+  <meta property="og:description" content="Schedule professional radon testing, mitigation assessment, or verification services.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- GLOBAL STICKY NAVBAR -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Radenza Radon Testing Home">
+        <!-- Luxury SVG Logo: Geometric R Monogram + Radon Detection Sensor + Environmental Airflow Arc -->
+        <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="radenzaTealGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#397A78"/>
+              <stop offset="100%" stop-color="#1E4745"/>
+            </linearGradient>
+            <linearGradient id="radenzaBrightTeal6" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4CB8B4"/>
+              <stop offset="100%" stop-color="#397A78"/>
+            </linearGradient>
+            <linearGradient id="radenzaAmberGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FCD566"/>
+              <stop offset="100%" stop-color="#D5A548"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 1. Geometric Outer Shield Base -->
+          <path d="M 50 6 L 86 26.5 A 3 3 0 0 1 88 29 L 88 71 A 3 3 0 0 1 86 73.5 L 50 94 A 3 3 0 0 1 47 94 L 14 73.5 A 3 3 0 0 1 12 71 L 12 29 A 3 3 0 0 1 14 26.5 Z" 
+                fill="url(#radenzaTealGrad6)" fill-opacity="0.08" stroke="currentColor" stroke-width="2.5" stroke-opacity="0.35"/>
+
+          <!-- 2. Monogram "R" Loop with Native Cutout (evenodd) -->
+          <path d="M 28 22 H 54 C 67 22 75 30 75 40 C 75 50 67 58 54 58 H 38 V 78 C 38 79.5 36.5 80 35 80 H 31 C 29.5 80 28 79.5 28 78 V 22 Z M 38 31 V 49 H 52 C 59 49 65 45 65 40 C 65 35 59 31 52 31 H 38 Z" 
+                fill-rule="evenodd" fill="url(#radenzaBrightTeal6)"/>
+
+          <!-- 3. Dynamic Mitigation Ribbon Leg -->
+          <path d="M 48 50 L 68 76 C 69.5 78 72 79.5 75.5 79.5 H 77.5 C 78.5 79.5 79 78.5 78 77 L 57 50 H 48 Z" 
+                fill="url(#radenzaBrightTeal6)"/>
+
+          <!-- 4. Safety Amber Radar Core -->
+          <circle cx="52" cy="40" r="5" fill="url(#radenzaAmberGrad6)"/>
+          <circle cx="52" cy="40" r="8.5" fill="none" stroke="#D5A548" stroke-width="1.5" stroke-dasharray="2.5 2.5" opacity="0.85"/>
+
+          <!-- 5. Environmental Airflow Arc -->
+          <path d="M 72 18 C 82 28 85 43 81 57" fill="none" stroke="url(#radenzaAmberGrad6)" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text-wrap">
+          <span class="brand-name">RADENZA</span>
+          <span class="brand-desc">RADON TESTING &amp; MITIGATION</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle dark mode"><span class="theme-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span></button>
+        <button class="rtl-toggle-btn" aria-label="Toggle RTL layout"><span class="rtl-label">RTL</span></button>
+        <button class="btn btn-primary" data-modal-target="testingModal">Book a Test &rarr;</button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay">
+    <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true">
+      <div class="drawer-header">
+        <div class="brand-text-wrap">
+          <span class="brand-name">RADENZA</span>
+          <span class="brand-desc">RADON TESTING &amp; MITIGATION</span>
+        </div>
+        <button class="drawer-close-btn" id="drawerCloseBtn">&times;</button>
+      </div>
+      <ul class="drawer-nav-links">
+        <li><a href="index.html" class="drawer-nav-link">Home</a></li>
+        <li><a href="index2.html" class="drawer-nav-link">Home 2</a></li>
+        <li><a href="services.html" class="drawer-nav-link">Services</a></li>
+        <li><a href="faq.html" class="drawer-nav-link">FAQ</a></li>
+        <li><a href="pricing.html" class="drawer-nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="drawer-nav-link">Contact</a></li>
+      </ul>
+      <div class="drawer-actions">
+        <div class="drawer-controls">
+          <button class="theme-toggle-btn" aria-label="Toggle dark mode">
+            <span class="theme-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </span>
+          </button>
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL layout">
+            <span class="rtl-label">RTL</span>
+          </button>
+        </div>
+        <button class="btn btn-primary" data-modal-target="testingModal" style="width: 100%;">Book a Test &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- CONTACT HERO SECTION -->
+    <section class="page-hero-section">
+      <div class="container page-hero-container reveal-on-scroll">
+        <span class="mono-tag">GET IN TOUCH WITH RADENZA</span>
+        <h1 class="page-hero-title">Contact RADENZA Specialists</h1>
+        <p class="page-hero-subtitle">
+          Schedule a property safety consultation, request a mitigation system estimate, or speak directly with our certified radon team.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT MAIN ENQUIRY & COMPANY INFO SECTION -->
+    <section class="section section-pale">
+      <div class="container">
+        <div class="contact-page-grid reveal-on-scroll">
+          
+          <!-- LEFT COLUMN: ENQUIRY / SEND A MESSAGE FORM -->
+          <div class="contact-enquiry-card">
+            <span class="mono-tag" style="margin-bottom: 0.5rem; display: block;">SEND A MESSAGE</span>
+            <h2 style="margin-bottom: 1.5rem;">Enquiry &amp; Inspection Form</h2>
+            
+            <form id="contactEnquiryForm" onsubmit="event.preventDefault(); document.getElementById('bookingSuccessModal').classList.add('active'); document.body.style.overflow='hidden';">
+              
+              <div class="form-group">
+                <label class="form-label">Full Name *</label>
+                <input type="text" class="form-control" required placeholder="John Doe">
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label">Email Address *</label>
+                  <input type="email" class="form-control" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Phone Number *</label>
+                  <input type="tel" class="form-control" required placeholder="+1 (800) 555-0199">
+                </div>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label class="form-label">Service Choice *</label>
+                  <select class="form-control" required>
+                    <option value="Radon Testing">Radon Testing (Initial Test)</option>
+                    <option value="Mitigation System">Radon Mitigation System</option>
+                    <option value="Post-Mitigation Re-Test">Post-Mitigation Re-Test</option>
+                    <option value="General Question">General Inquiry / Guidance</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Property Type *</label>
+                  <select class="form-control" required>
+                    <option value="Single Family">Single Family Home</option>
+                    <option value="Apartment / Condo">Apartment / Condo</option>
+                    <option value="Commercial Building">Commercial Building</option>
+                    <option value="Other">Other Structure</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Subject / Title</label>
+                <input type="text" class="form-control" placeholder="e.g. Schedule a 48-hr continuous radon monitor test">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Message / Property Details *</label>
+                <textarea class="form-control" rows="5" required placeholder="Please provide any details about your property, current radon readings, or preferred appointment dates..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem 1.5rem; font-size: 1.05rem;">
+                Send Message &rarr;
+              </button>
+
+            </form>
+          </div>
+
+          <!-- RIGHT COLUMN: COMPANY DETAILS, ADDRESS & SOCIAL MEDIA -->
+          <div class="contact-info-card">
+            
+            <div style="padding-bottom: 1rem; border-bottom: 1px solid var(--border-subtle);">
+              <span class="mono-tag" style="margin-bottom: 0.5rem; display: block;">COMPANY HEADQUARTERS</span>
+              <h3 style="margin-bottom: 0.5rem;">Reach Out Directly</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Our environmental safety specialists respond within 24 business hours.</p>
+            </div>
+
+            <!-- Address Block -->
+            <div class="info-block">
+              <div class="info-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="info-details">
+                <h4>Office Location &amp; Address</h4>
+                <p>RADENZA Radon Testing &amp; Mitigation HQ<br>100 Building Science Plaza, Suite 400<br>Chicago, IL 60601, USA</p>
+              </div>
+            </div>
+
+            <!-- Phone & Email Block -->
+            <div class="info-block">
+              <div class="info-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="info-details">
+                <h4>Phone &amp; Email Direct</h4>
+                <p><strong>Toll-Free Phone:</strong> +1 (800) 555-RADON<br><strong>Local Office:</strong> +1 (312) 555-0199<br><strong>Email:</strong> hello@radenza-demo.com</p>
+              </div>
+            </div>
+
+            <!-- Business Hours Block -->
+            <div class="info-block">
+              <div class="info-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="info-details">
+                <h4>Operational Hours</h4>
+                <p><strong>Monday – Friday:</strong> 8:00 AM – 6:00 PM<br><strong>Saturday:</strong> 9:00 AM – 2:00 PM<br><strong>Sunday:</strong> Closed (Tech Hotline Open)</p>
+              </div>
+            </div>
+
+            <!-- Social Media Icons Block -->
+            <div style="padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
+              <h4 style="font-family: var(--font-heading); font-size: 0.95rem; margin-bottom: 0.75rem; color: var(--text-main);">Connect with RADENZA</h4>
+              <div class="contact-social-bar">
+                <a href="#" class="social-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="Twitter / X Profile" title="Twitter / X">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="Facebook Page" title="Facebook">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="YouTube Channel" title="YouTube">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                </a>
+                <a href="#" class="social-icon-btn" aria-label="Instagram Profile" title="Instagram">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION 02 — GOOGLE MAP SECTION -->
+    <section class="section" style="padding-top: 1rem;">
+      <div class="container reveal-on-scroll">
+        <div class="text-center">
+          <span class="mono-tag">INTERACTIVE MAP &amp; LOCATION</span>
+          <h2 style="margin: 0.5rem 0 0.5rem 0;">Visit Our Headquarters</h2>
+          <p style="max-width: 600px; margin: 0 auto 1.5rem auto;">Located in central Chicago, providing residential &amp; commercial radon testing across the metropolitan region.</p>
+        </div>
+
+        <div class="google-map-wrapper">
+          <iframe 
+            class="google-map-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.366224160411!2d-87.62704468455866!3d41.88424997922176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2caf6b383d85%3A0x676b7e8d2e85a54!2sChicago%2C%20IL%2060601!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="RADENZA Office Headquarters Location Map">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SUCCESS MODAL OVERLAY FOR BOOKING SUBMISSION -->
+  <div class="modal-overlay" id="bookingSuccessModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn">&times;</button>
+      <div class="text-center" style="padding: 1rem;">
+        <div style="width: 64px; height: 64px; border-radius: 50%; background-color: var(--brand-teal-subtle); color: var(--brand-teal); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3 style="margin-bottom: 0.75rem;">Booking Request Received</h3>
+        <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.75rem;">
+          Thank you. Your demonstration booking request has been captured locally. A production website would connect this form to the company's secure scheduling system.
+        </p>
+        <button class="btn btn-primary modal-close-btn-trigger" style="width: 100%;" onclick="document.getElementById('bookingSuccessModal').classList.remove('active'); document.body.style.overflow='';">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIVERSAL MODALS -->
+  <!-- 1. Book a Radon Test Modal -->
+  <div class="modal-overlay" id="testingModal" role="dialog" aria-modal="true" aria-labelledby="testModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <span class="mono-tag">SCHEDULE ASSESSMENT</span>
+        <h3 id="testModalTitle" style="margin-top: 0.4rem;">Book a Radon Test</h3>
+      </div>
+      <form class="modal-form">
+        <div class="modal-form-body">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" required placeholder="Jane Doe">
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" required placeholder="jane@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" required placeholder="+1 (555) 000-0000">
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Property Type</label>
+              <select class="form-control" required>
+                <option value="Single Family">Single Family Home</option>
+                <option value="Condo">Apartment / Condo</option>
+                <option value="Commercial">Commercial Building</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Preferred Date</label>
+              <input type="date" class="form-control" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Continue &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Request Mitigation Quote Modal -->
+  <div class="modal-overlay" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <span class="mono-tag">SYSTEM PLANNING</span>
+        <h3 id="quoteModalTitle" style="margin-top: 0.4rem;">Request Mitigation Quote</h3>
+      </div>
+      <form class="modal-form">
+        <div class="modal-form-body">
+          <div class="form-group">
+            <label class="form-label">Property Type</label>
+            <select class="form-control" required>
+              <option value="Single Family">Single Family Residence</option>
+              <option value="Multi-Family">Multi-Family Structure</option>
+              <option value="Commercial">Commercial / Office</option>
+            </select>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Foundation Type</label>
+              <select class="form-control" required>
+                <option value="Basement">Basement</option>
+                <option value="Slab">Slab-on-Grade</option>
+                <option value="Crawlspace">Crawlspace</option>
+                <option value="Mixed">Mixed Foundation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Approx Size (sq ft)</label>
+              <input type="number" class="form-control" placeholder="e.g. 2400">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">ZIP / Postal Code</label>
+            <input type="text" class="form-control" required placeholder="12345">
+          </div>
+          <button type="submit" class="btn btn-amber" style="width: 100%; margin-top: 1rem;">Request Estimate &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem; display: inline-flex;" aria-label="Radenza Home">
+            <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="footerTealGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#4CB8B4"/>
+                  <stop offset="100%" stop-color="#397A78"/>
+                </linearGradient>
+                <linearGradient id="footerAmberGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FCD566"/>
+                  <stop offset="100%" stop-color="#D5A548"/>
+                </linearGradient>
+              </defs>
+              <path d="M 50 6 L 86 26.5 A 3 3 0 0 1 88 29 L 88 71 A 3 3 0 0 1 86 73.5 L 50 94 A 3 3 0 0 1 47 94 L 14 73.5 A 3 3 0 0 1 12 71 L 12 29 A 3 3 0 0 1 14 26.5 Z" 
+                    fill="url(#footerTealGrad6)" fill-opacity="0.12" stroke="#4CB8B4" stroke-width="2.5" stroke-opacity="0.5"/>
+              <path d="M 28 22 H 54 C 67 22 75 30 75 40 C 75 50 67 58 54 58 H 38 V 78 C 38 79.5 36.5 80 35 80 H 31 C 29.5 80 28 79.5 28 78 V 22 Z M 38 31 V 49 H 52 C 59 49 65 45 65 40 C 65 35 59 31 52 31 H 38 Z" 
+                    fill-rule="evenodd" fill="url(#footerTealGrad6)"/>
+              <path d="M 48 50 L 68 76 C 69.5 78 72 79.5 75.5 79.5 H 77.5 C 78.5 79.5 79 78.5 78 77 L 57 50 H 48 Z" 
+                    fill="url(#footerTealGrad6)"/>
+              <circle cx="52" cy="40" r="5" fill="url(#footerAmberGrad6)"/>
+              <circle cx="52" cy="40" r="8.5" fill="none" stroke="#D5A548" stroke-width="1.5" stroke-dasharray="2.5 2.5" opacity="0.85"/>
+              <path d="M 72 18 C 82 28 85 43 81 57" fill="none" stroke="url(#footerAmberGrad6)" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div class="brand-text-wrap">
+              <span class="brand-name" style="color: #FFFFFF;">RADENZA</span>
+              <span class="brand-desc" style="color: #94A6AE;">RADON TESTING &amp; MITIGATION</span>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem;">
+            Professional residential and commercial radon measurement, mitigation system design, and post-mitigation verification services.
+          </p>
+
+          <!-- Social Media Icons Bar -->
+          <div style="display: flex; gap: 0.65rem; margin-top: 1.25rem;">
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter / X Profile" title="Twitter / X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Facebook Page" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube Channel" title="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram Profile" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>EXPLORE</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index2.html">Home 2 (Monitoring)</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="pricing.html">Pricing Guide</a></li>
+            <li><a href="contact.html">Contact &amp; Booking</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>SERVICES</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Radon Testing</a></li>
+            <li><a href="services.html">Radon Mitigation</a></li>
+            <li><a href="services.html">Re-Testing Verification</a></li>
+            <li><a href="services.html">Property Assessment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>CONTACT</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Phone: +1 (800) 555-RADON</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Email: hello@radenza-demo.com</p>
+          <p style="font-size: 0.85rem;">Mon - Fri: 8:00 AM – 6:00 PM</p>
+        </div>
+
+        <div>
+          <h4>AIR SAFETY TIPS</h4>
+          <p style="font-size: 0.85rem;">Subscribe for non-alarmist practical building indoor air safety guidance.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Radenza educational updates.');">
+            <input type="email" class="newsletter-input" placeholder="Enter email..." required>
+            <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem;">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 RADENZA. All rights reserved. Professional Radon Testing &amp; Mitigation.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/booking.js"></script>
+</body>
+</html>

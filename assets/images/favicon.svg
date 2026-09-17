@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="radenzaTealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#397A78"/>
+      <stop offset="100%" stop-color="#1E4745"/>
+    </linearGradient>
+    <linearGradient id="radenzaBrightTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4CB8B4"/>
+      <stop offset="100%" stop-color="#397A78"/>
+    </linearGradient>
+    <linearGradient id="radenzaAmberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD566"/>
+      <stop offset="100%" stop-color="#D5A548"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 1. Geometric Outer Shield Base -->
+  <path d="M 50 6 L 86 26.5 A 3 3 0 0 1 88 29 L 88 71 A 3 3 0 0 1 86 73.5 L 50 94 A 3 3 0 0 1 47 94 L 14 73.5 A 3 3 0 0 1 12 71 L 12 29 A 3 3 0 0 1 14 26.5 Z" 
+        fill="url(#radenzaTealGrad)" fill-opacity="0.18" stroke="#397A78" stroke-width="3" stroke-opacity="0.6"/>
+
+  <!-- 2. Monogram "R" Loop with Native Cutout (evenodd) -->
+  <path d="M 28 22 H 54 C 67 22 75 30 75 40 C 75 50 67 58 54 58 H 38 V 78 C 38 79.5 36.5 80 35 80 H 31 C 29.5 80 28 79.5 28 78 V 22 Z M 38 31 V 49 H 52 C 59 49 65 45 65 40 C 65 35 59 31 52 31 H 38 Z" 
+        fill-rule="evenodd" fill="url(#radenzaBrightTeal)"/>
+
+  <!-- 3. Dynamic Mitigation Ribbon Leg -->
+  <path d="M 48 50 L 68 76 C 69.5 78 72 79.5 75.5 79.5 H 77.5 C 78.5 79.5 79 78.5 78 77 L 57 50 H 48 Z" 
+        fill="url(#radenzaBrightTeal)"/>
+
+  <!-- 4. Safety Amber Radar Core -->
+  <circle cx="52" cy="40" r="5" fill="url(#radenzaAmberGrad)"/>
+  <circle cx="52" cy="40" r="8.5" fill="none" stroke="#D5A548" stroke-width="1.5" stroke-dasharray="2.5 2.5" opacity="0.9"/>
+
+  <!-- 5. Environmental Airflow Arc -->
+  <path d="M 72 18 C 82 28 85 43 81 57" fill="none" stroke="url(#radenzaAmberGrad)" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

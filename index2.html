@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Science & Monitoring | Radenza</title>
+  <meta name="description" content="Technical indoor environmental monitoring, sub-slab pressure dynamics, and advanced mitigation engineering for residential and commercial properties.">
+  <meta property="og:title" content="Building Science & Monitoring | Radenza">
+  <meta property="og:description" content="Sub-slab depressurization engineering and continuous monitoring protocols.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- GLOBAL STICKY NAVBAR -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Radenza Radon Testing Home">
+        <!-- Luxury SVG Logo: Geometric R Monogram + Radon Detection Sensor + Environmental Airflow Arc -->
+        <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="radenzaTealGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#397A78"/>
+              <stop offset="100%" stop-color="#1E4745"/>
+            </linearGradient>
+            <linearGradient id="radenzaBrightTeal2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4CB8B4"/>
+              <stop offset="100%" stop-color="#397A78"/>
+            </linearGradient>
+            <linearGradient id="radenzaAmberGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FCD566"/>
+              <stop offset="100%" stop-color="#D5A548"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 1. Geometric Outer Shield Base -->
+          <path d="M 50 6 L 86 26.5 A 3 3 0 0 1 88 29 L 88 71 A 3 3 0 0 1 86 73.5 L 50 94 A 3 3 0 0 1 47 94 L 14 73.5 A 3 3 0 0 1 12 71 L 12 29 A 3 3 0 0 1 14 26.5 Z" 
+                fill="url(#radenzaTealGrad2)" fill-opacity="0.08" stroke="currentColor" stroke-width="2.5" stroke-opacity="0.35"/>
+
+          <!-- 2. Monogram "R" Loop with Native Cutout (evenodd) -->
+          <path d="M 28 22 H 54 C 67 22 75 30 75 40 C 75 50 67 58 54 58 H 38 V 78 C 38 79.5 36.5 80 35 80 H 31 C 29.5 80 28 79.5 28 78 V 22 Z M 38 31 V 49 H 52 C 59 49 65 45 65 40 C 65 35 59 31 52 31 H 38 Z" 
+                fill-rule="evenodd" fill="url(#radenzaBrightTeal2)"/>
+
+          <!-- 3. Dynamic Mitigation Ribbon Leg -->
+          <path d="M 48 50 L 68 76 C 69.5 78 72 79.5 75.5 79.5 H 77.5 C 78.5 79.5 79 78.5 78 77 L 57 50 H 48 Z" 
+                fill="url(#radenzaBrightTeal2)"/>
+
+          <!-- 4. Safety Amber Radar Core -->
+          <circle cx="52" cy="40" r="5" fill="url(#radenzaAmberGrad2)"/>
+          <circle cx="52" cy="40" r="8.5" fill="none" stroke="#D5A548" stroke-width="1.5" stroke-dasharray="2.5 2.5" opacity="0.85"/>
+
+          <!-- 5. Environmental Airflow Arc -->
+          <path d="M 72 18 C 82 28 85 43 81 57" fill="none" stroke="url(#radenzaAmberGrad2)" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text-wrap">
+          <span class="brand-name">RADENZA</span>
+          <span class="brand-desc">RADON TESTING &amp; MITIGATION</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle dark mode">
+          <span class="theme-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+        </button>
+        <button class="rtl-toggle-btn" aria-label="Toggle RTL layout"><span class="rtl-label">RTL</span></button>
+        <button class="btn btn-primary" data-modal-target="testingModal">Book a Test &rarr;</button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER MENU OVERLAY -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay">
+    <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true">
+      <div class="drawer-header">
+        <div class="brand-text-wrap">
+          <span class="brand-name">RADENZA</span>
+          <span class="brand-desc">RADON TESTING &amp; MITIGATION</span>
+        </div>
+        <button class="drawer-close-btn" id="drawerCloseBtn">&times;</button>
+      </div>
+      <ul class="drawer-nav-links">
+        <li><a href="index.html" class="drawer-nav-link">Home</a></li>
+        <li><a href="index2.html" class="drawer-nav-link">Home 2</a></li>
+        <li><a href="services.html" class="drawer-nav-link">Services</a></li>
+        <li><a href="faq.html" class="drawer-nav-link">FAQ</a></li>
+        <li><a href="pricing.html" class="drawer-nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="drawer-nav-link">Contact</a></li>
+      </ul>
+      <div class="drawer-actions">
+        <div class="drawer-controls">
+          <button class="theme-toggle-btn" aria-label="Toggle dark mode">
+            <span class="theme-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </span>
+          </button>
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL layout">
+            <span class="rtl-label">RTL</span>
+          </button>
+        </div>
+        <button class="btn btn-primary" data-modal-target="testingModal" style="width: 100%;">Book a Test &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- HOME 2 — SECTION 01 — HERO 2 (CENTERED WITH BACKGROUND IMAGE & THEME-AWARE OVERLAY) -->
+    <section class="section hero2-banner-section" style="position: relative; overflow: hidden; padding: 5rem 0; background-image: url('assets/images/6.png'); background-size: cover; background-position: center;">
+      
+      <!-- Theme-Aware Gradient Overlay -->
+      <div class="hero2-overlay"></div>
+
+      <div class="container" style="position: relative; z-index: 2;">
+        <div class="hero2-center-content reveal-on-scroll" style="max-width: 840px; margin: 0 auto; text-align: center;">
+          
+          <div class="hero-eyebrow" style="margin-bottom: 1rem;">
+            <span class="mono-tag" style="color: var(--brand-amber); background: rgba(217, 119, 6, 0.12); padding: 0.35rem 0.85rem; border-radius: 20px; border: 1px solid rgba(217, 119, 6, 0.3); font-weight: 700; display: inline-block;">ENVIRONMENTAL MONITORING • BUILDING SCIENCE</span>
+          </div>
+          
+          <h1 class="hero-title hero2-title" style="font-weight: 800; line-height: 1.18; margin-bottom: 1.25rem; color: var(--text-main);">
+            Advanced Sub-Slab Air Diagnostics &amp; Protection.
+          </h1>
+          
+          <p class="hero-subtitle" style="font-size: 1.15rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 2.25rem auto; line-height: 1.6;">
+            Engineering-focused radon detection and active depressurization systems tailored for complex foundation geometries and commercial properties.
+          </p>
+
+          <div class="hero-actions" style="justify-content: center; margin-bottom: 3rem;">
+            <button class="btn btn-amber" data-modal-target="quoteModal">Request Technical Scope &rarr;</button>
+            <a href="services.html" class="btn btn-secondary">View Systems</a>
+          </div>
+
+          <!-- Diagnostic Radon Monitor Matrix Badge Bar -->
+          <div class="tech-indicator-overlay" style="position: relative; bottom: auto; left: auto; right: auto; max-width: 650px; margin: 0 auto;">
+            <div class="tech-indicator-header">
+              <span>DIAGNOSTIC RADON MONITOR MATRIX</span>
+              <div class="sensor-pulse-dot"></div>
+            </div>
+            <div class="indicator-grid">
+              <div class="indicator-box">
+                <span class="indicator-label">PRESSURE DELTA</span>
+                <span class="indicator-value" style="color: var(--brand-amber);">-12 Pa</span>
+              </div>
+              <div class="indicator-box">
+                <span class="indicator-label">FAN VELOCITY</span>
+                <span class="indicator-value">2,800 RPM</span>
+              </div>
+              <div class="indicator-box">
+                <span class="indicator-label">SYSTEM LOG</span>
+                <span class="indicator-value" style="color: var(--brand-teal-light);">VERIFIED</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME 2 — SECTION 02 — ENVIRONMENTAL AIR DYNAMICS -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">AIR DYNAMICS</span>
+          <h2 style="margin: 0.75rem 0 1rem 0;">How Sub-Slab Pressure Affects Indoor Air</h2>
+          <p>The stack effect, exhaust ventilation, and barometric fluctuations draw soil gas upward through foundation micro-cracks.</p>
+        </div>
+
+        <div class="air-dynamics-card-wrapper reveal-on-scroll">
+          <div class="air-dynamics-grid">
+            <div class="air-dynamics-card">
+              <h4 style="margin-bottom: 0.5rem;">Stack Effect Pressure</h4>
+              <p style="font-size: 0.9rem;">Warm indoor air rising creates negative pressure at lower building levels, pulling soil gas into basements and crawlspaces.</p>
+            </div>
+            <div class="air-dynamics-card amber-border">
+              <h4 style="margin-bottom: 0.5rem;">Mechanical Exhaust</h4>
+              <p style="font-size: 0.9rem;">HVAC air handlers, kitchen hoods, and bathroom fans exhaust indoor air, amplifying sub-slab pressure differentials.</p>
+            </div>
+            <div class="air-dynamics-card">
+              <h4 style="margin-bottom: 0.5rem;">Permeable Pathways</h4>
+              <p style="font-size: 0.9rem;">Unsealed concrete joints, utility line penetrations, and sump basins provide zero-resistance routes for soil gas entry.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME 2 — SECTION 03 — RESIDENTIAL VS COMMERCIAL PROTOCOLS -->
+    <section class="section section-pale">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">PROPERTY PROTOCOLS</span>
+          <h2 style="margin: 0.75rem 0 1rem 0;">Tailored Strategies for Every Structure Type</h2>
+          <p>Residential homes and commercial complexes present distinct foundation layouts, HVAC loads, and occupancy patterns.</p>
+        </div>
+
+        <div class="protocol-cards-grid">
+          <div class="stage-card reveal-on-scroll">
+            <span class="mono-tag" style="margin-bottom: 0.5rem;">RESIDENTIAL PROTOCOL</span>
+            <h3>Single-Family &amp; Multi-Unit Housing</h3>
+            <ul style="list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li style="display: flex; gap: 0.5rem;"><span style="color: var(--brand-teal); font-weight: bold;">✓</span> Lowest living area continuous monitoring</li>
+              <li style="display: flex; gap: 0.5rem;"><span style="color: var(--brand-teal); font-weight: bold;">✓</span> Direct sub-slab active suction points</li>
+              <li style="display: flex; gap: 0.5rem;"><span style="color: var(--brand-teal); font-weight: bold;">✓</span> Quiet energy-efficient inline venting fans</li>
+              <li style="display: flex; gap: 0.5rem;"><span style="color: var(--brand-teal); font-weight: bold;">✓</span> Roof-line exterior discharge compliance</li>
+            </ul>
+          </div>
+
+          <div class="stage-card reveal-on-scroll">
+            <span class="mono-tag" style="margin-bottom: 0.5rem; color: var(--brand-amber);">COMMERCIAL PROTOCOL</span>
+            <h3>Schools, Healthcare &amp; Commercial Office</h3>
+            <ul style="list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li style="display: flex; gap: 0.5rem;"><span style="color: var(--brand-amber); font-weight: bold;">✓</span> Multi-point continuous CRM grid placement</li>
+              <li style="display: flex; gap: 0.5rem;"><span style="color: var(--brand-amber); font-weight: bold;">✓</span> Diagnostic sub-slab pressure field extension (PFE)</li>
+              <li style="display: flex; gap: 0.5rem;"><span style="color: var(--brand-amber); font-weight: bold;">✓</span> Integration with Building Automation Systems (BAS)</li>
+              <li style="display: flex; gap: 0.5rem;"><span style="color: var(--brand-amber); font-weight: bold;">✓</span> Commercial HVAC positive-pressure balancing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME 2 — SECTION 04 — CONTINUOUS VS SHORT-TERM MONITORING -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">TEST METHODOLOGY MATRIX</span>
+          <h2 style="margin: 0.75rem 0 1rem 0;">Choosing the Right Measurement Device</h2>
+          <p>Understand the technical differences between short-term initial screening and continuous long-term monitors.</p>
+        </div>
+
+        <div style="overflow-x: auto; margin-top: 3rem;" class="reveal-on-scroll">
+          <table style="width: 100%; border-collapse: collapse; background: var(--bg-surface); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm);">
+            <thead>
+              <tr style="background: var(--brand-slate); color: #FFFFFF; font-family: var(--font-heading); text-align: left;">
+                <th style="padding: 1.25rem;">TEST TYPE</th>
+                <th style="padding: 1.25rem;">DURATION</th>
+                <th style="padding: 1.25rem;">ACCURACY PROFILE</th>
+                <th style="padding: 1.25rem;">PRIMARY USE CASE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 1.25rem; font-weight: bold;">Continuous Radon Monitor (CRM)</td>
+                <td style="padding: 1.25rem; font-family: var(--font-mono);">48 Hours - 7 Days</td>
+                <td style="padding: 1.25rem; color: var(--brand-teal); font-weight: bold;">High Precision (Hourly Log)</td>
+                <td style="padding: 1.25rem;">Real estate transactions &amp; diagnostic baseline</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 1.25rem; font-weight: bold;">Alpha Track Long-Term Detector</td>
+                <td style="padding: 1.25rem; font-family: var(--font-mono);">90 Days - 1 Year</td>
+                <td style="padding: 1.25rem; color: var(--brand-teal); font-weight: bold;">Annual Average Concentration</td>
+                <td style="padding: 1.25rem;">Seasonal variation &amp; annual exposure review</td>
+              </tr>
+              <tr>
+                <td style="padding: 1.25rem; font-weight: bold;">Sub-Slab Pressure Monitor</td>
+                <td style="padding: 1.25rem; font-family: var(--font-mono);">Continuous (24/7)</td>
+                <td style="padding: 1.25rem; color: var(--brand-amber); font-weight: bold;">System Differential Pressure</td>
+                <td style="padding: 1.25rem;">Post-mitigation active fan performance monitoring</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME 2 — SECTION 05 — MITIGATION ENGINEERING ARCHITECTURE -->
+    <section class="section section-pale">
+      <div class="container">
+        <div class="ssd-arch-grid reveal-on-scroll">
+          <!-- Left Column: Image 7.png -->
+          <div>
+            <img src="assets/images/7.png" alt="Sub-Slab Active Depressurization (SSD) engineering architecture visual" class="ssd-arch-img">
+          </div>
+
+          <!-- Right Column: Content & Engineering Specs -->
+          <div>
+            <span class="mono-tag" style="color: var(--brand-teal);">ENGINEERING SPECS</span>
+            <h2 style="margin: 0.75rem 0 1rem 0;">Sub-Slab Active Depressurization (SSD) Architecture</h2>
+            <p style="color: var(--text-muted); line-height: 1.65; margin-bottom: 2rem;">
+              Active mitigation works by reversing natural sub-slab soil pressure, creating negative vacuum pressure below the foundation to draw soil gas safely into sealed suction piping and vent it above the roofline.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div style="display: flex; gap: 1rem; align-items: flex-start; background: var(--bg-surface); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <div style="background: rgba(57,122,120,0.15); color: var(--brand-teal); font-weight: 700; font-family: var(--font-mono); font-size: 0.85rem; padding: 0.35rem 0.6rem; border-radius: 4px; flex-shrink: 0;">01</div>
+                <div>
+                  <h4 style="margin: 0 0 0.25rem 0; font-size: 0.95rem;">Sub-Slab Suction Pits</h4>
+                  <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Excavated aggregate pits with airtight urethane floor slab penetration seals.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start; background: var(--bg-surface); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <div style="background: rgba(230,161,0,0.15); color: var(--brand-amber); font-weight: 700; font-family: var(--font-mono); font-size: 0.85rem; padding: 0.35rem 0.6rem; border-radius: 4px; flex-shrink: 0;">02</div>
+                <div>
+                  <h4 style="margin: 0 0 0.25rem 0; font-size: 0.95rem;">Whisper-Quiet EC Fan Stack</h4>
+                  <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Brushless electronically-commutated inline fans engineered for continuous duty.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start; background: var(--bg-surface); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <div style="background: rgba(57,122,120,0.15); color: var(--brand-teal); font-weight: 700; font-family: var(--font-mono); font-size: 0.85rem; padding: 0.35rem 0.6rem; border-radius: 4px; flex-shrink: 0;">03</div>
+                <div>
+                  <h4 style="margin: 0 0 0.25rem 0; font-size: 0.95rem;">System Diagnostic Manometer</h4>
+                  <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Real-time visual fluid or digital gauge for instant suction pressure verification.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME 2 — UNIQUE SECTION 1 — INTERACTIVE MITIGATION CALCULATOR -->
+    <section class="section calc-section" style="background: var(--bg-surface-elevated);">
+
+      <!-- Scoped mobile override — guarantees correct layout at all widths -->
+      <style>
+        /* ---- SYSTEM ESTIMATOR: GLOBAL MOBILE SAFE ---- */
+        .calc-section .radon-calc-container {
+          width: 100%;
+          box-sizing: border-box;
+          overflow: hidden;
+        }
+        .calc-section .radon-calc-grid {
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .calc-section .radon-calc-grid > div {
+          width: 100%;
+          box-sizing: border-box;
+          min-width: 0;
+        }
+        .calc-section .calc-type-selector {
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .calc-section .calc-type-btn {
+          width: 100%;
+          box-sizing: border-box;
+          white-space: normal;
+          word-break: break-word;
+        }
+        .calc-section .calc-opt-box {
+          width: 100%;
+          box-sizing: border-box;
+          overflow: hidden;
+        }
+        .calc-section .calc-opt-box p {
+          word-break: break-word;
+          overflow-wrap: break-word;
+          white-space: normal;
+        }
+        .calc-section .calc-result-card {
+          width: 100%;
+          box-sizing: border-box;
+          overflow: hidden;
+        }
+        .calc-section .calc-metric-row {
+          width: 100%;
+          box-sizing: border-box;
+        }
+        .calc-section .calc-metric-label,
+        .calc-section .calc-metric-val {
+          word-break: break-word;
+          overflow-wrap: break-word;
+          min-width: 0;
+          max-width: 100%;
+        }
+        .calc-section .calc-range-slider {
+          width: 100%;
+          box-sizing: border-box;
+          display: block;
+        }
+        .calc-section .calc-slider-label {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 0.25rem;
+          width: 100%;
+        }
+
+        @media (max-width: 768px) {
+          .calc-section .radon-calc-container {
+            padding: 1.5rem 1rem !important;
+          }
+          .calc-section .radon-calc-grid {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+          }
+          .calc-section .calc-type-selector {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 0.5rem !important;
+          }
+          .calc-section .calc-metric-row {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 0.2rem !important;
+            padding: 0.65rem 0 !important;
+          }
+          .calc-section .calc-metric-val {
+            font-size: 1rem !important;
+          }
+          .calc-section .calc-slider-label {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+          }
+          .calc-section .calc-result-card img {
+            max-height: 180px !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .calc-section .calc-type-selector {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      </style>
+
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag" style="color: var(--brand-teal);">SYSTEM ESTIMATOR</span>
+          <h2 style="margin: 0.75rem 0 1rem 0;">Radon Mitigation Sizing &amp; Energy Calculator</h2>
+          <p style="max-width: 720px; margin: 0 auto;">Select your property footprint and foundation architecture to estimate suction pit requirements, airflow CFM capacity, and continuous EC fan operating cost.</p>
+        </div>
+
+        <div class="radon-calc-container reveal-on-scroll">
+          <div class="radon-calc-grid">
+            <!-- Left Controls -->
+            <div>
+              <span class="mono-tag" style="color: var(--brand-amber); font-size: 0.75rem;">1. SELECT FOUNDATION TYPE</span>
+              <div class="calc-type-selector">
+                <button class="calc-type-btn active" data-type="basement">Basement Slab</button>
+                <button class="calc-type-btn" data-type="crawlspace">Vented Crawlspace</button>
+                <button class="calc-type-btn" data-type="slab">Slab-on-Grade</button>
+                <button class="calc-type-btn" data-type="commercial">Commercial Complex</button>
+              </div>
+
+              <div class="calc-slider-wrap">
+                <label class="calc-slider-label">
+                  <span>PROPERTY FOOTPRINT (SQ FT)</span>
+                  <strong id="calcSqFtVal" style="color: var(--brand-amber); font-size: 1.1rem;">2,500 Sq Ft</strong>
+                </label>
+                <input type="range" min="800" max="15000" step="100" value="2500" class="calc-range-slider" id="calcSqFtSlider">
+              </div>
+
+              <div class="calc-opt-box" style="background: rgba(255,255,255,0.03); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.08);">
+                <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--brand-teal); display: block; margin-bottom: 0.4rem;">OPTIMIZATION SUMMARY</span>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;" id="calcOptText">Calculated based on standard sub-slab soil aggregate permeability and continuous EC fan duty cycles.</p>
+              </div>
+            </div>
+
+            <!-- Right Live Results Card -->
+            <div class="calc-result-card">
+              <span class="mono-tag" style="color: var(--brand-teal); font-size: 0.75rem; display: block; margin-bottom: 1rem;">ENGINEERING ESTIMATE</span>
+
+              <img src="assets/images/8.png" alt="EC Radon fan and digital manometer control panel" style="width: 100%; height: auto; max-height: 280px; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid rgba(57,122,120,0.3); margin-bottom: 1.25rem; display: block;">
+
+              <div class="calc-metric-row">
+                <span class="calc-metric-label">SUCTION PITS REQUIRED</span>
+                <span class="calc-metric-val" id="calcPitsVal">1 Pit</span>
+              </div>
+              <div class="calc-metric-row">
+                <span class="calc-metric-label">AIRFLOW CAPACITY</span>
+                <span class="calc-metric-val" id="calcCfmVal">140 CFM</span>
+              </div>
+              <div class="calc-metric-row">
+                <span class="calc-metric-label">RECOMMENDED FAN MODEL</span>
+                <span class="calc-metric-val" id="calcFanVal" style="color: #FFFFFF; font-size: 1rem;">Radenza Silent-EC 200</span>
+              </div>
+              <div class="calc-metric-row">
+                <span class="calc-metric-label">EST. MONTHLY FAN ENERGY COST</span>
+                <span class="calc-metric-val" id="calcCostVal" style="color: var(--brand-amber);">$3.85 / mo</span>
+              </div>
+
+              <div style="margin-top: 1.5rem;">
+                <button class="btn btn-amber" data-modal-target="quoteModal" style="width: 100%;">Request Scope &rarr;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- HOME 2 — UNIQUE SECTION 2 — RADON HEALTH BENCHMARK MATRIX -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag" style="color: var(--brand-amber);">PUBLIC HEALTH BENCHMARKS</span>
+          <h2 style="margin: 0.75rem 0 1rem 0;">Radon Concentration &amp; Health Risk Matrix</h2>
+          <p style="max-width: 720px; margin: 0 auto;">Click below to explore international safety benchmarks (WHO vs EPA) and recommended action timeframes based on measured pCi/L concentrations.</p>
+        </div>
+
+        <div class="reveal-on-scroll">
+          <!-- Color Gradient Heatmap Bar -->
+          <div class="benchmark-scale-bar">
+            <div class="scale-segment" style="background: #2b8a3e;" title="Outdoor Air (0.4 pCi/L)"></div>
+            <div class="scale-segment" style="background: #397A78;" title="WHO Target (2.7 pCi/L)"></div>
+            <div class="scale-segment" style="background: #e6a100;" title="EPA Action Level (4.0 pCi/L)"></div>
+            <div class="scale-segment" style="background: #d9480f;" title="Elevated Concentration (10.0 pCi/L)"></div>
+            <div class="scale-segment" style="background: #c92a2a;" title="Critical Level (20.0+ pCi/L)"></div>
+          </div>
+
+          <!-- Benchmark Pills -->
+          <div class="benchmark-pills-wrap">
+            <div class="benchmark-pill active" data-level="outdoor">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #2b8a3e; display: block;">0.4 pCi/L</span>
+              <strong style="font-size: 0.85rem;">Outdoor Baseline</strong>
+            </div>
+            <div class="benchmark-pill" data-level="who">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--brand-teal); display: block;">2.7 pCi/L</span>
+              <strong style="font-size: 0.85rem;">WHO Reference</strong>
+            </div>
+            <div class="benchmark-pill" data-level="epa">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--brand-amber); display: block;">4.0 pCi/L</span>
+              <strong style="font-size: 0.85rem;">EPA Action Level</strong>
+            </div>
+            <div class="benchmark-pill" data-level="elevated">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #d9480f; display: block;">10.0 pCi/L</span>
+              <strong style="font-size: 0.85rem;">Elevated Risk</strong>
+            </div>
+            <div class="benchmark-pill" data-level="critical">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #c92a2a; display: block;">20.0+ pCi/L</span>
+              <strong style="font-size: 0.85rem;">Critical Priority</strong>
+            </div>
+          </div>
+
+          <!-- Dynamic Detail Card -->
+          <div class="benchmark-detail-card" id="benchmarkDetailCard">
+            <div>
+              <span id="bmCategoryBadge" style="font-family: var(--font-mono); font-size: 0.75rem; background: rgba(43,138,62,0.15); color: #2b8a3e; padding: 0.25rem 0.6rem; border-radius: 4px; font-weight: 700;">OUTDOOR AMBIENT AIR</span>
+              <h3 id="bmTitle" style="margin: 0.75rem 0 0.5rem 0;">Typical Outdoor Environment (0.4 pCi/L)</h3>
+              <p id="bmDesc" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65;">Natural open-air dilution maintains outdoor radon at minimal background concentrations across most geographical regions.</p>
+              
+              <img src="assets/images/4.png" alt="Continuous Radon Monitor CRM diagnostics inspection" style="width: 100%; height: auto; max-height: 320px; object-fit: cover; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-top: 1.25rem; display: block;">
+            </div>
+
+            <div style="background: var(--bg-surface-elevated); padding: 1.75rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;">
+              <div>
+                <div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
+                  <span style="font-family: var(--font-mono); font-size: 0.725rem; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">HEALTH EXPOSURE ESTIMATE</span>
+                  <strong id="bmExposureText" style="font-family: var(--font-heading); color: #2b8a3e; font-size: 1.15rem; display: block;">Negligible Exposure (0.4 pCi/L)</strong>
+                </div>
+
+                <div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
+                  <span style="font-family: var(--font-mono); font-size: 0.725rem; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">RECOMMENDED ACTION</span>
+                  <strong id="bmActionText" style="font-family: var(--font-heading); color: var(--text-heading); font-size: 1.05rem; display: block;">No action required.</strong>
+                </div>
+
+                <div style="margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);">
+                  <span style="font-family: var(--font-mono); font-size: 0.725rem; color: var(--text-muted); display: block; margin-bottom: 0.3rem;">RECOMMENDED PROTOCOL</span>
+                  <strong id="bmProtocolText" style="font-family: var(--font-mono); color: var(--brand-teal); font-size: 0.95rem; display: block;">Baseline Ambient Measurement</strong>
+                </div>
+
+                <ul id="bmChecklist" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                  <li style="display: flex; gap: 0.5rem; align-items: center;"><span style="color: #2b8a3e; font-weight: bold;">✓</span> Routine screening every 2 years</li>
+                  <li style="display: flex; gap: 0.5rem; align-items: center;"><span style="color: #2b8a3e; font-weight: bold;">✓</span> Standard structural ventilation adequate</li>
+                </ul>
+              </div>
+
+              <div style="margin-top: 1.5rem;">
+                <button class="btn btn-primary" data-modal-target="testingModal" style="width: 100%;">Schedule Assessment &rarr;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME 2 — SECTION 06 — ENTERPRISE & HOMEOWNER ASSESSMENT CTA -->
+    <section class="section section-dark">
+      <div class="container text-center reveal-on-scroll">
+        <span class="mono-tag" style="color: var(--brand-amber);">TECHNICAL INSPECTION</span>
+        <h2 style="margin: 1rem 0 1.25rem 0; color: #FFFFFF;">Ready to Evaluate Your Property's Sub-Slab Dynamics?</h2>
+        <p style="max-width: 650px; margin: 0 auto 2.5rem auto;">
+          Contact our technical environmental inspection team to discuss appropriate testing, continuous CRM deployment, or mitigation scope.
+        </p>
+        <div class="cta-btn-group">
+          <button class="btn btn-amber" data-modal-target="testingModal">Book Property Assessment &rarr;</button>
+          <a href="contact.html" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.3); color: #FFFFFF;">Contact Specialists</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- UNIVERSAL MODALS -->
+  <!-- 1. Book a Radon Test Modal -->
+  <div class="modal-overlay" id="testingModal" role="dialog" aria-modal="true" aria-labelledby="testModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <span class="mono-tag">SCHEDULE ASSESSMENT</span>
+        <h3 id="testModalTitle" style="margin-top: 0.4rem;">Book a Radon Test</h3>
+      </div>
+      <form class="modal-form">
+        <div class="modal-form-body">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" required placeholder="Jane Doe">
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" required placeholder="jane@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" required placeholder="+1 (555) 000-0000">
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Property Type</label>
+              <select class="form-control" required>
+                <option value="Single Family">Single Family Home</option>
+                <option value="Condo">Apartment / Condo</option>
+                <option value="Commercial">Commercial Building</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Preferred Date</label>
+              <input type="date" class="form-control" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Continue &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Request Mitigation Quote Modal -->
+  <div class="modal-overlay" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <span class="mono-tag">SYSTEM PLANNING</span>
+        <h3 id="quoteModalTitle" style="margin-top: 0.4rem;">Request Mitigation Quote</h3>
+      </div>
+      <form class="modal-form">
+        <div class="modal-form-body">
+          <div class="form-group">
+            <label class="form-label">Property Type</label>
+            <select class="form-control" required>
+              <option value="Single Family">Single Family Residence</option>
+              <option value="Multi-Family">Multi-Family Structure</option>
+              <option value="Commercial">Commercial / Office</option>
+            </select>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Foundation Type</label>
+              <select class="form-control" required>
+                <option value="Basement">Basement</option>
+                <option value="Slab">Slab-on-Grade</option>
+                <option value="Crawlspace">Crawlspace</option>
+                <option value="Mixed">Mixed Foundation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Approx Size (sq ft)</label>
+              <input type="number" class="form-control" placeholder="e.g. 2400">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">ZIP / Postal Code</label>
+            <input type="text" class="form-control" required placeholder="12345">
+          </div>
+          <button type="submit" class="btn btn-amber" style="width: 100%; margin-top: 1rem;">Request Estimate &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem; display: inline-flex;" aria-label="Radenza Home">
+            <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="footerTealGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#4CB8B4"/>
+                  <stop offset="100%" stop-color="#397A78"/>
+                </linearGradient>
+                <linearGradient id="footerAmberGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FCD566"/>
+                  <stop offset="100%" stop-color="#D5A548"/>
+                </linearGradient>
+              </defs>
+              <path d="M 50 6 L 86 26.5 A 3 3 0 0 1 88 29 L 88 71 A 3 3 0 0 1 86 73.5 L 50 94 A 3 3 0 0 1 47 94 L 14 73.5 A 3 3 0 0 1 12 71 L 12 29 A 3 3 0 0 1 14 26.5 Z" 
+                    fill="url(#footerTealGrad2)" fill-opacity="0.12" stroke="#4CB8B4" stroke-width="2.5" stroke-opacity="0.5"/>
+              <path d="M 28 22 H 54 C 67 22 75 30 75 40 C 75 50 67 58 54 58 H 38 V 78 C 38 79.5 36.5 80 35 80 H 31 C 29.5 80 28 79.5 28 78 V 22 Z M 38 31 V 49 H 52 C 59 49 65 45 65 40 C 65 35 59 31 52 31 H 38 Z" 
+                    fill-rule="evenodd" fill="url(#footerTealGrad2)"/>
+              <path d="M 48 50 L 68 76 C 69.5 78 72 79.5 75.5 79.5 H 77.5 C 78.5 79.5 79 78.5 78 77 L 57 50 H 48 Z" 
+                    fill="url(#footerTealGrad2)"/>
+              <circle cx="52" cy="40" r="5" fill="url(#footerAmberGrad2)"/>
+              <circle cx="52" cy="40" r="8.5" fill="none" stroke="#D5A548" stroke-width="1.5" stroke-dasharray="2.5 2.5" opacity="0.85"/>
+              <path d="M 72 18 C 82 28 85 43 81 57" fill="none" stroke="url(#footerAmberGrad2)" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div class="brand-text-wrap">
+              <span class="brand-name" style="color: #FFFFFF;">RADENZA</span>
+              <span class="brand-desc" style="color: #94A6AE;">RADON TESTING &amp; MITIGATION</span>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem;">
+            Professional residential and commercial radon measurement, mitigation system design, and post-mitigation verification services.
+          </p>
+
+          <!-- Social Media Icons Bar -->
+          <div style="display: flex; gap: 0.65rem; margin-top: 1.25rem;">
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter / X Profile" title="Twitter / X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Facebook Page" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube Channel" title="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram Profile" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>EXPLORE</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index2.html">Home 2 (Monitoring)</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="pricing.html">Pricing Guide</a></li>
+            <li><a href="contact.html">Contact &amp; Booking</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>SERVICES</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Radon Testing</a></li>
+            <li><a href="services.html">Radon Mitigation</a></li>
+            <li><a href="services.html">Re-Testing Verification</a></li>
+            <li><a href="services.html">Property Assessment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>CONTACT</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Phone: +1 (800) 555-RADON</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Email: hello@radenza-demo.com</p>
+          <p style="font-size: 0.85rem;">Mon - Fri: 8:00 AM – 6:00 PM</p>
+        </div>
+
+        <div>
+          <h4>AIR SAFETY TIPS</h4>
+          <p style="font-size: 0.85rem;">Subscribe for non-alarmist practical building indoor air safety guidance.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Radenza educational updates.');">
+            <input type="email" class="newsletter-input" placeholder="Enter email..." required>
+            <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem;">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 RADENZA. All rights reserved. Professional Radon Testing &amp; Mitigation.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/booking.js"></script>
+</body>
+</html>

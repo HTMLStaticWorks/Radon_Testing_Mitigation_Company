@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101719"/>
+      <stop offset="100%" stop-color="#17252B"/>
+    </linearGradient>
+    <linearGradient id="wallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E2E38"/>
+      <stop offset="100%" stop-color="#152330"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="600" fill="url(#bg)"/>
+
+  <!-- Room interior scene — clean modern basement -->
+  <!-- Floor -->
+  <rect x="0" y="440" width="900" height="160" fill="#0A1420"/>
+  <!-- Floor grid lines (tile effect) -->
+  <g stroke="#131F2A" stroke-width="1" opacity="0.8">
+    <line x1="0" y1="460" x2="900" y2="460"/>
+    <line x1="0" y1="490" x2="900" y2="490"/>
+    <line x1="0" y1="520" x2="900" y2="520"/>
+    <line x1="0" y1="550" x2="900" y2="550"/>
+    <line x1="150" y1="440" x2="150" y2="600"/>
+    <line x1="300" y1="440" x2="300" y2="600"/>
+    <line x1="450" y1="440" x2="450" y2="600"/>
+    <line x1="600" y1="440" x2="600" y2="600"/>
+    <line x1="750" y1="440" x2="750" y2="600"/>
+  </g>
+
+  <!-- Walls -->
+  <rect x="0" y="0" width="900" height="440" fill="url(#wallGrad)"/>
+  <!-- Baseboard -->
+  <rect x="0" y="430" width="900" height="12" fill="#0E1F28"/>
+  <rect x="0" y="430" width="900" height="3" fill="#397A78" opacity="0.6"/>
+
+  <!-- Ceiling with lighting -->
+  <rect x="0" y="0" width="900" height="8" fill="#0A1620"/>
+
+  <!-- Recessed ceiling lights -->
+  <ellipse cx="225" cy="8" rx="25" ry="8" fill="#FFFFFF" opacity="0.05"/>
+  <ellipse cx="450" cy="8" rx="25" ry="8" fill="#FFFFFF" opacity="0.05"/>
+  <ellipse cx="675" cy="8" rx="25" ry="8" fill="#FFFFFF" opacity="0.05"/>
+
+  <!-- Light cones from ceiling -->
+  <polygon points="210,10 240,10 290,430 180,430" fill="#FFFFFF" opacity="0.015"/>
+  <polygon points="435,10 465,10 510,430 405,430" fill="#FFFFFF" opacity="0.02"/>
+  <polygon points="660,10 690,10 740,430 625,430" fill="#FFFFFF" opacity="0.015"/>
+
+  <!-- Wall texture / concrete block suggestion -->
+  <g stroke="#152330" stroke-width="1" opacity="0.4">
+    <line x1="0" y1="60" x2="900" y2="60"/>
+    <line x1="0" y1="120" x2="900" y2="120"/>
+    <line x1="0" y1="180" x2="900" y2="180"/>
+    <line x1="0" y1="240" x2="900" y2="240"/>
+    <line x1="0" y1="300" x2="900" y2="300"/>
+    <line x1="0" y1="360" x2="900" y2="360"/>
+    <line x1="0" y1="420" x2="900" y2="420"/>
+    <!-- Horizontal mid-blocks alternating -->
+    <line x1="75" y1="60" x2="75" y2="120"/>
+    <line x1="225" y1="60" x2="225" y2="120"/>
+    <line x1="375" y1="60" x2="375" y2="120"/>
+    <line x1="525" y1="60" x2="525" y2="120"/>
+    <line x1="675" y1="60" x2="675" y2="120"/>
+    <line x1="825" y1="60" x2="825" y2="120"/>
+    <line x1="150" y1="120" x2="150" y2="180"/>
+    <line x1="300" y1="120" x2="300" y2="180"/>
+    <line x1="450" y1="120" x2="450" y2="180"/>
+    <line x1="600" y1="120" x2="600" y2="180"/>
+    <line x1="750" y1="120" x2="750" y2="180"/>
+  </g>
+
+  <!-- Radon device placed on floor -->
+  <!-- Device pedestal/table -->
+  <rect x="385" y="350" width="130" height="90" fill="#17252B" stroke="#2D414B" stroke-width="1.5" rx="4"/>
+  <rect x="395" y="355" width="110" height="8" fill="#2D414B" rx="2"/>
+
+  <!-- Monitor device on table -->
+  <rect x="400" y="270" width="100" height="85" fill="#1E2E38" stroke="#397A78" stroke-width="2.5" rx="8"/>
+  <!-- Device screen -->
+  <rect x="408" y="278" width="84" height="55" fill="#0A1420" rx="4"/>
+  <!-- Teal status bar -->
+  <rect x="408" y="278" width="84" height="4" fill="#397A78" opacity="0.9" rx="2"/>
+  <!-- Screen content -->
+  <text x="450" y="303" fill="#D5A548" font-family="monospace" font-size="8" text-anchor="middle">SAMPLING</text>
+  <text x="450" y="320" fill="#4D9694" font-family="monospace" font-size="11" font-weight="bold" text-anchor="middle">ACTIVE</text>
+  <!-- Blinking dot -->
+  <circle cx="482" cy="281" r="3" fill="#D5A548" opacity="0.9"/>
+  <!-- Device base/status button -->
+  <rect x="440" y="347" width="20" height="6" fill="#2D414B" rx="3"/>
+
+  <!-- Measurement label card -->
+  <rect x="270" y="295" width="120" height="50" fill="#0F1E28" stroke="#397A78" stroke-width="1.5" rx="6"/>
+  <text x="330" y="318" fill="#94A6AE" font-family="monospace" font-size="9" text-anchor="middle">PLACEMENT</text>
+  <text x="330" y="334" fill="#FFFFFF" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">LOWEST LEVEL</text>
+
+  <!-- Line connecting label to device -->
+  <line x1="390" y1="320" x2="400" y2="315" stroke="#647C82" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Pipe coming down through ceiling (mitigation system visible) -->
+  <rect x="720" y="0" width="28" height="440" fill="#2D4F60" rx="6"/>
+  <rect x="724" y="0" width="6" height="440" fill="#FFFFFF" opacity="0.08"/>
+  <text x="810" y="200" fill="#647C82" font-family="monospace" font-size="11" text-anchor="middle">MITIGATION</text>
+  <text x="810" y="215" fill="#647C82" font-family="monospace" font-size="11" text-anchor="middle">VENT PIPE</text>
+  <line x1="748" y1="210" x2="808" y2="210" stroke="#647C82" stroke-width="1"/>
+
+  <!-- U-tube vacuum gauge on pipe -->
+  <rect x="755" y="180" width="44" height="60" fill="#1E2E38" stroke="#D5A548" stroke-width="2" rx="6"/>
+  <text x="777" y="206" fill="#D5A548" font-family="monospace" font-size="8" text-anchor="middle">U-TUBE</text>
+  <text x="777" y="222" fill="#FFFFFF" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle">-12 Pa</text>
+  <text x="777" y="234" fill="#647C82" font-family="monospace" font-size="7" text-anchor="middle">VACUUM</text>
+
+  <!-- Airflow particles from floor -->
+  <g fill="#4D9694" opacity="0.4">
+    <circle cx="200" cy="400" r="3"/>
+    <circle cx="250" cy="370" r="2"/>
+    <circle cx="180" cy="340" r="2.5"/>
+    <circle cx="650" cy="390" r="3"/>
+    <circle cx="600" cy="350" r="2"/>
+    <circle cx="670" cy="330" r="2.5"/>
+  </g>
+
+  <!-- Floor crack / pathway indicator -->
+  <path d="M 100 438 Q 140 435 180 440 Q 200 443 230 440" stroke="#D5A548" stroke-width="1.5" stroke-opacity="0.4" fill="none" stroke-dasharray="6,4"/>
+  <text x="165" y="455" fill="#D5A548" fill-opacity="0.6" font-family="monospace" font-size="9" text-anchor="middle">POTENTIAL PATHWAY</text>
+
+  <text x="450" y="590" fill="#FFFFFF" fill-opacity="0.12" font-family="sans-serif" font-size="10" text-anchor="middle" letter-spacing="3">RADENZA • BASEMENT INSPECTION &amp; MONITORING</text>
+</svg>
