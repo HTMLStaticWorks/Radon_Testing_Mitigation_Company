@@ -639,10 +639,11 @@ main {
   align-items: center;
   justify-content: center;
   padding: 0 1.5rem;
-  background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-primary) 100%);
-  border-bottom: 1px solid var(--border-subtle);
+  background: linear-gradient(135deg, #0F1719 0%, #162529 50%, #1E3338 100%);
+  border-bottom: 3px solid var(--brand-teal);
   position: relative;
   box-sizing: border-box;
+  color: #FFFFFF;
 }
 
 @media (max-width: 768px) {
@@ -914,8 +915,18 @@ main {
   font-weight: 700;
   color: var(--brand-teal);
   background-color: var(--brand-teal-subtle);
-  padding: 0.35rem 0.75rem;
+  padding: 0.35rem 0.5rem;
   border-radius: var(--radius-sm);
+  white-space: nowrap;
+  flex: 0 0 110px;
+  width: 110px;
+  min-width: 110px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 0.1rem;
 }
 
 .disclaimer-box {
@@ -2529,8 +2540,13 @@ select.form-control {
     padding: 1.25rem !important;
   }
   .marker-badge {
-    display: inline-block !important;
+    display: inline-flex !important;
+    width: auto !important;
+    min-width: 0 !important;
+    flex: 0 0 auto !important;
     margin-bottom: 0.15rem !important;
+    margin-top: 0 !important;
+    white-space: nowrap !important;
   }
   .timeline-step-item:nth-child(odd).reveal-on-scroll,
   .timeline-step-item:nth-child(even).reveal-on-scroll {
@@ -2962,8 +2978,11 @@ select.form-control {
 /* SSD Architecture image */
 .ssd-arch-img {
   width: 100%;
-  height: 460px;
-  object-fit: cover;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xl);
   display: block;
