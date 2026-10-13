@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Radenza Radon Testing &amp; Mitigation Specialists</title>
+  <meta name="description" content="Discover Radenza's company history, mission, vision, building science expertise, NRPP/AARST certified leadership, and guaranteed sub-2.0 pCi/L radon mitigation standard.">
+  <meta property="og:title" content="About Radenza | Radon Testing &amp; Mitigation Specialists">
+  <meta property="og:description" content="Pioneering precision radon defense, mission, vision, and certified environmental engineering for residential and commercial properties.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.8">
+</head>
+<body>
+
+  <!-- GLOBAL STICKY NAVBAR -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Radenza Radon Testing Home">
+        <!-- Luxury SVG Logo: Geometric R Monogram + Radon Detection Sensor + Environmental Airflow Arc -->
+        <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="aboutTealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#397A78"/>
+              <stop offset="100%" stop-color="#1E4745"/>
+            </linearGradient>
+            <linearGradient id="aboutBrightTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4CB8B4"/>
+              <stop offset="100%" stop-color="#397A78"/>
+            </linearGradient>
+            <linearGradient id="aboutAmberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FCD566"/>
+              <stop offset="100%" stop-color="#D5A548"/>
+            </linearGradient>
+          </defs>
+
+          <!-- 1. Geometric Outer Shield Base -->
+          <path d="M 50 6 L 86 26.5 A 3 3 0 0 1 88 29 L 88 71 A 3 3 0 0 1 86 73.5 L 50 94 A 3 3 0 0 1 47 94 L 14 73.5 A 3 3 0 0 1 12 71 L 12 29 A 3 3 0 0 1 14 26.5 Z" 
+                fill="url(#aboutTealGrad)" fill-opacity="0.08" stroke="currentColor" stroke-width="2.5" stroke-opacity="0.35"/>
+
+          <!-- 2. Monogram "R" Loop with Native Cutout -->
+          <path d="M 28 22 H 54 C 67 22 75 30 75 40 C 75 50 67 58 54 58 H 38 V 78 C 38 79.5 36.5 80 35 80 H 31 C 29.5 80 28 79.5 28 78 V 22 Z M 38 31 V 49 H 52 C 59 49 65 45 65 40 C 65 35 59 31 52 31 H 38 Z" 
+                fill-rule="evenodd" fill="url(#aboutBrightTeal)"/>
+
+          <!-- 3. Dynamic Mitigation Ribbon Leg -->
+          <path d="M 48 50 L 68 76 C 69.5 78 72 79.5 75.5 79.5 H 77.5 C 78.5 79.5 79 78.5 78 77 L 57 50 H 48 Z" 
+                fill="url(#aboutBrightTeal)"/>
+
+          <!-- 4. Safety Amber Radar Core -->
+          <circle cx="52" cy="40" r="5" fill="url(#aboutAmberGrad)"/>
+          <circle cx="52" cy="40" r="8.5" fill="none" stroke="#D5A548" stroke-width="1.5" stroke-dasharray="2.5 2.5" opacity="0.85"/>
+
+          <!-- 5. Environmental Airflow Arc -->
+          <path d="M 72 18 C 82 28 85 43 81 57" fill="none" stroke="url(#aboutAmberGrad)" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text-wrap">
+          <span class="brand-name">RADENZA</span>
+          <span class="brand-desc">RADON TESTING &amp; MITIGATION</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index2.html" class="nav-link">Home 2</a></li>
+          <li><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions Right -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle dark mode">
+          <span class="theme-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+        </button>
+        <button class="rtl-toggle-btn" aria-label="Toggle RTL layout">
+          <span class="rtl-label">RTL</span>
+        </button>
+        <button class="btn btn-primary" data-modal-target="testingModal">Schedule an Inspection &rarr;</button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay">
+    <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile navigation menu">
+      <div class="drawer-header">
+        <div class="brand-text-wrap">
+          <span class="brand-name">RADENZA</span>
+          <span class="brand-desc">RADON TESTING &amp; MITIGATION</span>
+        </div>
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">&times;</button>
+      </div>
+      <ul class="drawer-nav-links">
+        <li><a href="index.html" class="drawer-nav-link">Home</a></li>
+        <li><a href="index2.html" class="drawer-nav-link">Home 2</a></li>
+        <li><a href="about.html" class="drawer-nav-link active">About</a></li>
+        <li><a href="services.html" class="drawer-nav-link">Services</a></li>
+        <li><a href="pricing.html" class="drawer-nav-link">Pricing</a></li>
+        <li><a href="faq.html" class="drawer-nav-link">FAQ</a></li>
+        <li><a href="contact.html" class="drawer-nav-link">Contact</a></li>
+      </ul>
+      <div class="drawer-actions">
+        <div class="drawer-controls">
+          <button class="theme-toggle-btn" aria-label="Toggle dark mode">
+            <span class="theme-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </span>
+          </button>
+          <button class="rtl-toggle-btn" aria-label="Toggle RTL layout">
+            <span class="rtl-label">RTL</span>
+          </button>
+        </div>
+        <button class="btn btn-primary" data-modal-target="testingModal" style="width: 100%;">Schedule an Inspection &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- ABOUT HERO SECTION (EXACT UNIFORM NON-HOME STYLE & HEIGHT) -->
+    <section class="page-hero-section" style="background: linear-gradient(135deg, #0F1719 0%, #162529 50%, #1E3338 100%); border-bottom: 3px solid var(--brand-teal); color: #FFFFFF;">
+      <div class="container page-hero-container reveal-on-scroll">
+        <span class="mono-tag" style="color: var(--brand-amber); background: rgba(230, 161, 0, 0.2);">ABOUT RADENZA</span>
+        <h1 class="page-hero-title" style="color: #FFFFFF !important;"><span class="hero-title-nowrap">Company Background</span> <span class="hero-title-nowrap">&amp; Engineering</span></h1>
+        <p class="page-hero-subtitle" style="color: rgba(255, 255, 255, 0.9) !important;">
+          Learn about our building science origins, mission, vision, certified industrial hygiene expertise, and guaranteed standards in radon testing and active mitigation.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 01 — COMPANY BACKGROUND & ORIGIN STORY -->
+    <section class="section">
+      <div class="container">
+        <div class="about-story-grid reveal-on-scroll">
+          <div>
+            <span class="mono-tag">01 • OUR BACKGROUND &amp; ORIGIN</span>
+            <h2 style="margin: 0.6rem 0 1rem 0; font-size: clamp(1.85rem, 3.5vw, 2.5rem); line-height: 1.2;">
+              Built on Empirical Physics, Not Guesswork or Fear
+            </h2>
+            <p>
+              Radenza was established in 2011 by licensed environmental engineer <strong>Dr. Marcus Vance</strong> to replace crude industry guesswork with building physics. Traditional installers mounted generic fans to arbitrary basement corners—causing noisy motor vibration, energy waste, and radon levels that barely complied with federal limits.
+            </p>
+            
+            <div class="about-story-quote">
+              &ldquo;Radon mitigation is not rough plumbing. It is a sub-surface fluid mechanics challenge. When you measure pressure differentials down to a thousandth of an inch of water column, you know the air is safe.&rdquo;
+              <div style="font-weight: 700; font-style: normal; margin-top: 0.4rem; color: var(--brand-teal); font-size: 0.88rem;">
+                — Dr. Marcus Vance, PE, C-NRPP, Founder &amp; Chief Building Scientist
+              </div>
+            </div>
+
+            <p>
+              By establishing <strong>Pressure Field Extension (PFE) diagnostics</strong> as our baseline, Radenza has permanently protected over 10,000 single-family, school, and commercial buildings—delivering a verified average reading of <strong>0.78 pCi/L</strong>, well below the federal 4.0 action threshold.
+            </p>
+
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-top: 1.75rem;">
+              <a href="services.html" class="btn btn-primary">Explore Diagnostic Services &rarr;</a>
+            </div>
+          </div>
+
+          <div class="about-story-img-col">
+            <div class="about-story-img-wrap">
+              <img src="assets/images/Customer consultation.jpg" alt="Radenza diagnostic specialist explaining radon test results to homeowners" class="about-story-img">
+              <div class="about-story-badge">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--brand-amber); display: flex; align-items: center; justify-content: center; color: #101719; flex-shrink: 0;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                  <div style="font-weight: 700; font-size: 0.95rem; color: #FFFFFF;">Sub-2.0 pCi/L Guarantee</div>
+                  <div style="font-size: 0.8rem; color: #94A6AE;">Zero fear-mongering • 100% lab-verified data</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02 — 15-YEAR TRAJECTORY & MILESTONES -->
+    <section class="section section-pale">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">02 • 15-YEAR TRAJECTORY</span>
+          <h2 style="margin-top: 0.5rem;">Milestones in Scientific Air Quality</h2>
+          <p>How Radenza shaped modern standards in diagnostic sub-slab depressurization.</p>
+        </div>
+
+        <div class="timeline-track reveal-on-scroll" style="margin-top: 3rem;">
+          <!-- 2011 Milestone -->
+          <div class="timeline-item">
+            <div class="timeline-item-left">
+              <div class="timeline-card">
+                <span class="timeline-year-pill">2011 • FOUNDING LAB</span>
+                <h4 style="margin-bottom: 0.5rem;">Independent Diagnostic Chamber Founded</h4>
+                <p style="font-size: 0.9rem; margin: 0;">Dr. Marcus Vance opens an independent continuous radon test chamber, offering lab-calibrated CRM monitoring for real estate transactions and building audits.</p>
+              </div>
+            </div>
+            <div class="timeline-marker-dot" aria-hidden="true"></div>
+            <div class="timeline-item-right"></div>
+          </div>
+
+          <!-- 2015 Milestone -->
+          <div class="timeline-item">
+            <div class="timeline-item-left"></div>
+            <div class="timeline-marker-dot" aria-hidden="true"></div>
+            <div class="timeline-item-right">
+              <div class="timeline-card">
+                <span class="timeline-year-pill">2015 • PROTOCOL MANDATE</span>
+                <h4 style="margin-bottom: 0.5rem;">Standardized Pressure Field Extension (PFE)</h4>
+                <p style="font-size: 0.9rem; margin: 0;">Radenza mandates micro-manometer vacuum diagnostics on 100% of installations, eliminating oversized fan guesswork and slashing average post-mitigation levels below 1.2 pCi/L.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2019 Milestone -->
+          <div class="timeline-item">
+            <div class="timeline-item-left">
+              <div class="timeline-card">
+                <span class="timeline-year-pill">2019 • NATIONAL RECOGNITION</span>
+                <h4 style="margin-bottom: 0.5rem;">AARST / NRPP National Project Honor</h4>
+                <p style="font-size: 0.9rem; margin: 0;">Awarded regional recognition for large-scale multi-family school campus mitigation. Deployed 24 manifold active depressurization systems covering 140,000 sq ft.</p>
+              </div>
+            </div>
+            <div class="timeline-marker-dot" aria-hidden="true"></div>
+            <div class="timeline-item-right"></div>
+          </div>
+
+          <!-- 2022 Milestone -->
+          <div class="timeline-item">
+            <div class="timeline-item-left"></div>
+            <div class="timeline-marker-dot" aria-hidden="true"></div>
+            <div class="timeline-item-right">
+              <div class="timeline-card">
+                <span class="timeline-year-pill">2022 • TELEMETRY ERA</span>
+                <h4 style="margin-bottom: 0.5rem;">Silent Fan Engineering &amp; IoT Pressure Telemetry</h4>
+                <p style="font-size: 0.9rem; margin: 0;">Pioneered vibration-dampened acoustic isolation mounts and real-time remote pressure sensors with automated customer notifications for zero-downtime protection.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2026 Milestone -->
+          <div class="timeline-item">
+            <div class="timeline-item-left">
+              <div class="timeline-card" style="border-color: var(--brand-teal);">
+                <span class="timeline-year-pill" style="color: var(--brand-teal); background: var(--brand-teal-subtle);">2026 • TODAY</span>
+                <h4 style="margin-bottom: 0.5rem;">10,000+ Verified Structures &amp; Transferable Guarantee</h4>
+                <p style="font-size: 0.9rem; margin: 0;">Surpassing 10,480 mitigated homes and commercial sites with an industry-leading average reading of 0.78 pCi/L and 100% transferable lifetime warranty compliance.</p>
+              </div>
+            </div>
+            <div class="timeline-marker-dot" style="border-color: var(--brand-amber);" aria-hidden="true"></div>
+            <div class="timeline-item-right"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03 — MISSION & VISION -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">03 • PURPOSE &amp; VISION</span>
+          <h2 style="margin-top: 0.5rem;">Our Mission &amp; Vision for Clean Indoor Air</h2>
+          <p>
+            The foundational commitments that govern every diagnostic calculation, engineering plan, and active depressurization installation at Radenza.
+          </p>
+        </div>
+
+        <!-- Mission & Vision 2-Column Cards -->
+        <div class="mission-vision-grid reveal-on-scroll">
+          <!-- Mission Card -->
+          <div class="mission-card">
+            <div>
+              <div class="mv-header-row">
+                <div class="mv-icon-box">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polygon points="12 6 12 12 16 14"/></svg>
+                </div>
+                <span class="mono-tag" style="font-size: 0.72rem;">ESTABLISHED 2011</span>
+              </div>
+              <span class="mono-tag" style="font-size: 0.72rem; margin-bottom: 0.5rem; display: block;">OUR GUIDING PURPOSE</span>
+              <h3 style="margin-bottom: 1rem; font-size: 1.65rem;">Our Mission</h3>
+              <p class="mv-lead-text">
+                To permanently eliminate the invisible hazard of radioactive soil gases from buildings through <strong>mathematically verified diagnostics</strong>, transparent education, and an uncompromising guarantee of clean indoor air.
+              </p>
+            </div>
+
+            <ul class="mv-points-list">
+              <li class="mv-point-item">
+                <svg class="mv-point-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Empirical Precision:</strong> Every system engineered using real Pressure Field Extension (PFE) sub-slab vacuum data, never guesswork.</span>
+              </li>
+              <li class="mv-point-item">
+                <svg class="mv-point-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Sub-2.0 pCi/L Target:</strong> Guaranteeing air purity well below the EPA 4.0 limit, re-tuning at our own expense if needed.</span>
+              </li>
+              <li class="mv-point-item">
+                <svg class="mv-point-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Ethical Objectivity:</strong> Independent testing and transparent telemetry with zero sales quotas or scare tactics.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Vision Card -->
+          <div class="vision-card">
+            <div>
+              <div class="mv-header-row">
+                <div class="mv-icon-box">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                </div>
+                <span class="mono-tag" style="color: var(--brand-amber); font-size: 0.72rem;">FUTURE HORIZON</span>
+              </div>
+              <span class="mono-tag" style="color: var(--brand-amber); font-size: 0.72rem; margin-bottom: 0.5rem; display: block;">OUR STRATEGIC STANDARD</span>
+              <h3 style="margin-bottom: 1rem; font-size: 1.65rem;">Our Vision</h3>
+              <p class="mv-lead-text">
+                To establish empirical pressure diagnostics and continuous digital air telemetry as the <strong>universal standard of practice</strong> across North America—ensuring no family is ever subjected to guesswork.
+              </p>
+            </div>
+
+            <ul class="mv-points-list">
+              <li class="mv-point-item">
+                <svg class="mv-point-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Universal Telemetry:</strong> Real-time differential pressure and IoT sensors providing proactive, zero-downtime protection.</span>
+              </li>
+              <li class="mv-point-item">
+                <svg class="mv-point-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Architectural Respect:</strong> Whisper-quiet (&lt;32 dBA) concealed piping routes that preserve luxury home aesthetics.</span>
+              </li>
+              <li class="mv-point-item">
+                <svg class="mv-point-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Building Code Leadership:</strong> Advancing national construction standards for school campuses and multi-family structures.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Three Guarantees Assurance Strip -->
+        <div class="mv-assurance-strip reveal-on-scroll">
+          <div class="mv-assurance-card">
+            <div class="mv-assurance-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <div class="mv-assurance-title">Sub-2.0 pCi/L Guarantee</div>
+              <p class="mv-assurance-desc">Every system engineered to beat 2.0 pCi/L or adjusted at our own expense.</p>
+            </div>
+          </div>
+
+          <div class="mv-assurance-card">
+            <div class="mv-assurance-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+            </div>
+            <div>
+              <div class="mv-assurance-title">100% Transferable Warranty</div>
+              <p class="mv-assurance-desc">Lifetime pipe and structural seal protection transfers automatically to new buyers.</p>
+            </div>
+          </div>
+
+          <div class="mv-assurance-card">
+            <div class="mv-assurance-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            </div>
+            <div>
+              <div class="mv-assurance-title">Whisper-Quiet Acoustics</div>
+              <p class="mv-assurance-desc">Vibration-isolated inline motors operating under 32 dBA for zero living disruption.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04 — SCIENTIFIC EXPERTISE & ENGINEERING METHODOLOGY -->
+    <section class="section section-pale">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">04 • TECHNICAL CAPABILITIES</span>
+          <h2 style="margin-top: 0.5rem;">The Four Pillars of Radenza Engineering</h2>
+          <p>
+            Unlike general contractors who treat radon as generic pipe fitting, Radenza approaches every building as a dynamic aerodynamic system.
+          </p>
+        </div>
+
+        <div class="expertise-card-grid reveal-on-scroll">
+          <!-- Pillar 1 -->
+          <div class="expertise-card">
+            <div class="expertise-card-header">
+              <div class="expertise-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <span class="mono-tag" style="font-size: 0.72rem; margin-bottom: 0.5rem;">PILLAR 01 • SOIL MECHANICS</span>
+              <h3 class="expertise-card-title">Sub-Slab Pressure Field Extension (PFE)</h3>
+            </div>
+            <p class="expertise-card-desc">
+              We drill precise diagnostic micro-test holes in the slab furthest from the proposed suction pit. Using calibrated digital micromanometers, we test how negative vacuum propagates across the aggregate base layer. This guarantees your fan draws radon evenly across every square foot of foundation.
+            </p>
+            <div class="expertise-spec-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Standard Target: -0.015 in. W.C. Minimum Pressure Drop Across Perimeter
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="expertise-card">
+            <div class="expertise-card-header">
+              <div class="expertise-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <span class="mono-tag" style="font-size: 0.72rem; margin-bottom: 0.5rem;">PILLAR 02 • SENSOR TELEMETRY</span>
+              <h3 class="expertise-card-title">Continuous Radon Monitoring (CRM)</h3>
+            </div>
+            <p class="expertise-card-desc">
+              Instead of cheap passive charcoal pouches susceptible to humidity distortion, Radenza deploys lab-calibrated dual-chamber pulsed ionization detectors. We record hourly radon spikes, barometric dips, indoor temperature, and tamper sensor logs for irrefutable clarity.
+            </p>
+            <div class="expertise-spec-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              EPA &amp; AARST Device Protocol: Dual-Detector Chamber Verification
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="expertise-card">
+            <div class="expertise-card-header">
+              <div class="expertise-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <span class="mono-tag" style="font-size: 0.72rem; margin-bottom: 0.5rem;">PILLAR 03 • ARCHITECTURAL INTEGRATION</span>
+              <h3 class="expertise-card-title">Aesthetic Routing &amp; Acoustic Decoupling</h3>
+            </div>
+            <p class="expertise-card-desc">
+              We take immense pride in your home's appearance. We route exhaust pipes through interior chases, garages, or closet chases whenever feasible. All piping is heavy Schedule 40 PVC, with flexible elastomeric anti-vibration couplings that reduce motor resonance to whispers below 32 dBA.
+            </p>
+            <div class="expertise-spec-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Acoustic Isolation: &lt;32 dBA Whisper-Quiet Operation Inside Living Spaces
+            </div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="expertise-card">
+            <div class="expertise-card-header">
+              <div class="expertise-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="22.01"/><line x1="15" y1="22" x2="15" y2="22.01"/><line x1="9" y1="6" x2="9" y2="6.01"/><line x1="15" y1="6" x2="15" y2="6.01"/><line x1="9" y1="10" x2="9" y2="10.01"/><line x1="15" y1="10" x2="15" y2="10.01"/><line x1="9" y1="14" x2="9" y2="14.01"/><line x1="15" y1="14" x2="15" y2="14.01"/><line x1="9" y1="18" x2="9" y2="18.01"/><line x1="15" y1="18" x2="15" y2="18.01"/></svg>
+              </div>
+              <span class="mono-tag" style="font-size: 0.72rem; margin-bottom: 0.5rem;">PILLAR 04 • COMPLEX FOOTPRINTS</span>
+              <h3 class="expertise-card-title">Commercial &amp; Multi-Family Systems</h3>
+            </div>
+            <p class="expertise-card-desc">
+              Large footprint structures present HVAC makeup air balance, high volume slab penetrations, and regulatory hurdles (HUD, OSHA, school safety protocols). Radenza designs multi-pit vacuum manifolds that balance draw without straining building pressurization.
+            </p>
+            <div class="expertise-spec-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Compliant with ANSI/AARST RMS-MF-2023 &amp; HUD Multifamily Standards
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 05 — LEADERSHIP TEAM & CERTIFIED SPECIALISTS -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">05 • LEADERSHIP &amp; EXPERTISE</span>
+          <h2 style="margin-top: 0.5rem;">Meet the Minds Behind Radenza</h2>
+          <p>
+            Direct oversight on every project by credentialed environmental engineers, certified industrial hygienists, and master mitigation specialists.
+          </p>
+        </div>
+
+        <div class="team-grid reveal-on-scroll">
+          <!-- Leader 1 -->
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="assets/images/team-marcus-vance.jpg" alt="Dr. Marcus Vance, Founder &amp; Chief Building Scientist" class="team-img">
+              <span class="team-cred-tag">PE • C-NRPP #108922</span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Dr. Marcus Vance</h3>
+              <span class="team-role">Founder &amp; Chief Building Scientist</span>
+              <p class="team-bio">
+                PhD in Environmental Fluid Dynamics with over 22 years pioneering sub-slab pressure diagnostics. Former technical advisor to regional radon task forces.
+              </p>
+              <div class="team-specs">
+                <span class="team-spec-pill">PFE Diagnostics</span>
+                <span class="team-spec-pill">Fluid Mechanics</span>
+                <span class="team-spec-pill">AARST Contributor</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leader 2 -->
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="assets/images/Customer consultation.jpg" alt="Elena Rostova, Director of Environmental Analytics" class="team-img">
+              <span class="team-cred-tag">MS • CIH #8942</span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Elena Rostova</h3>
+              <span class="team-role">Dir. Environmental Analytics &amp; CIH</span>
+              <p class="team-bio">
+                Master's in Industrial Hygiene with 14 years specializing in aerosol physics, continuous telemetry calibration, and chemical soil vapor intrusion mitigation.
+              </p>
+              <div class="team-specs">
+                <span class="team-spec-pill">CRM Calibration</span>
+                <span class="team-spec-pill">Vapor Intrusion</span>
+                <span class="team-spec-pill">Air Chemistry</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leader 3 -->
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="assets/images/Radon testing technician.jpg" alt="David Sterling, Master Mitigation Field Director" class="team-img">
+              <span class="team-cred-tag">NRPP-RMS • OSHA 30</span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">David Sterling</h3>
+              <span class="team-role">Master Mitigation Field Director</span>
+              <p class="team-bio">
+                Over 18 years directing more than 6,500 residential and commercial mitigation installations, with master expertise in complex foundations and acoustics.
+              </p>
+              <div class="team-specs">
+                <span class="team-spec-pill">Active Sub-Slab</span>
+                <span class="team-spec-pill">Vapor Encapsulation</span>
+                <span class="team-spec-pill">Acoustics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Leader 4 -->
+          <div class="team-card">
+            <div class="team-img-wrap">
+              <img src="assets/images/Professional service.jpg" alt="Sarah Jenkins, Director of Real Estate Compliance &amp; Client Advisory" class="team-img">
+              <span class="team-cred-tag">BPI-BA • REAC Lead</span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Sarah Jenkins</h3>
+              <span class="team-role">Director of Real Estate Compliance</span>
+              <p class="team-bio">
+                Manages expedited 48-hour escrow testing programs for attorneys, mortgage lenders, and title agencies to ensure zero delays during property transactions.
+              </p>
+              <div class="team-specs">
+                <span class="team-spec-pill">Escrow Fast-Track</span>
+                <span class="team-spec-pill">Lender Compliance</span>
+                <span class="team-spec-pill">Client Care</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 06 — PROVEN IMPACT & NATIONAL ACCREDITATIONS -->
+    <section class="section section-pale">
+      <div class="container">
+        <div class="text-center reveal-on-scroll">
+          <span class="mono-tag">06 • TRACK RECORD &amp; ACCREDITATIONS</span>
+          <h2 style="margin-top: 0.5rem;">Proven Impact &amp; National Credentials</h2>
+          <p>
+            Real results logged across 15 years of scientific diagnostics and active compliance with all governing environmental safety bodies.
+          </p>
+        </div>
+
+        <!-- 1. Single Architectural Performance Metric Strip -->
+        <div class="metric-impact-strip reveal-on-scroll">
+          <div class="metric-impact-item">
+            <span class="metric-impact-num metric-counter-anim" data-target="10480" data-prefix="" data-suffix="+">10,480+</span>
+            <span class="metric-impact-title">Buildings Mitigated</span>
+            <p class="metric-impact-desc">Single-family, schools &amp; commercial footprints secured</p>
+          </div>
+
+          <div class="metric-impact-item">
+            <span class="metric-impact-num metric-counter-anim" data-target="0.78" data-decimals="2" data-prefix="" data-suffix=" pCi/L">0.78 pCi/L</span>
+            <span class="metric-impact-title">Average Post-Mitigation</span>
+            <p class="metric-impact-desc">Far below the EPA 4.0 action level &amp; our 2.0 guarantee</p>
+          </div>
+
+          <div class="metric-impact-item">
+            <span class="metric-impact-num metric-counter-anim" data-target="99.4" data-decimals="1" data-prefix="" data-suffix="%">99.4%</span>
+            <span class="metric-impact-title">First-Pass Clearance</span>
+            <p class="metric-impact-desc">Targeted sub-2.0 pCi/L on initial post-install testing</p>
+          </div>
+
+          <div class="metric-impact-item">
+            <span class="metric-impact-num metric-counter-anim" data-target="100" data-prefix="" data-suffix="%">100%</span>
+            <span class="metric-impact-title">Warranty Honored</span>
+            <p class="metric-impact-desc">Transferred automatically to buyers with zero transfer fees</p>
+          </div>
+        </div>
+
+        <!-- 2. Unified Regulatory Credentials & Standards Showcase Panel -->
+        <div class="credentials-showcase-panel reveal-on-scroll">
+          <div class="credentials-panel-header">
+            <div class="credentials-panel-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              REGULATORY LICENSING &amp; GOVERNING BODIES
+            </div>
+            <span class="credentials-panel-note">All field specialists carry active credentials &amp; verify annual proficiency</span>
+          </div>
+
+          <div class="credentials-badge-grid">
+            <!-- Credential 1 -->
+            <div class="credential-badge-item">
+              <div class="credential-badge-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="credential-badge-text">
+                <strong class="credential-badge-name">NRPP Certified Master</strong>
+                <span class="credential-badge-detail">National Radon Proficiency Program • ID #108922-RMS</span>
+              </div>
+            </div>
+
+            <!-- Credential 2 -->
+            <div class="credential-badge-item">
+              <div class="credential-badge-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              </div>
+              <div class="credential-badge-text">
+                <strong class="credential-badge-name">AARST Corporate Member</strong>
+                <span class="credential-badge-detail">Radon Scientists &amp; Technologists • Standards Working Group</span>
+              </div>
+            </div>
+
+            <!-- Credential 3 -->
+            <div class="credential-badge-item">
+              <div class="credential-badge-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="credential-badge-text">
+                <strong class="credential-badge-name">EPA Standards Compliant</strong>
+                <span class="credential-badge-detail">Full Adherence to ANSI/AARST SGM-SF &amp; RMS-MF 2023</span>
+              </div>
+            </div>
+
+            <!-- Credential 4 -->
+            <div class="credential-badge-item">
+              <div class="credential-badge-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              </div>
+              <div class="credential-badge-text">
+                <strong class="credential-badge-name">BPI Building Analyst</strong>
+                <span class="credential-badge-detail">Envelope Air Tightness, Back-Draft Prevention &amp; IAQ</span>
+              </div>
+            </div>
+
+            <!-- Credential 5 -->
+            <div class="credential-badge-item">
+              <div class="credential-badge-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div class="credential-badge-text">
+                <strong class="credential-badge-name">OSHA 30 Safety Standard</strong>
+                <span class="credential-badge-detail">Hazardous Vapor Protocol &amp; Job Site Health Compliance</span>
+              </div>
+            </div>
+
+            <!-- Credential 6 -->
+            <div class="credential-badge-item">
+              <div class="credential-badge-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="credential-badge-text">
+                <strong class="credential-badge-name">BBB A+ Accredited Firm</strong>
+                <span class="credential-badge-detail">Zero Unresolved Claims • 100% Lifetime Warranty Honor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 07 — CALL TO ACTION & CONSULTATION -->
+    <section class="section" style="padding-top: 1rem;">
+      <div class="container">
+        <!-- Integrated Call-to-Action Banner -->
+        <div class="about-cta-banner reveal-on-scroll">
+          <span class="mono-tag" style="color: var(--brand-amber); margin-bottom: 0.75rem; display: inline-flex;">
+            07 • TAKE ACTION FOR YOUR FAMILY'S HEALTH
+          </span>
+          <h2 style="color: #FFFFFF; font-size: clamp(2rem, 4vw, 2.85rem); margin-bottom: 1rem;">
+            Protect Your Home With Guaranteed Scientific Precision
+          </h2>
+          <p style="color: rgba(255, 255, 255, 0.85); max-width: 680px; margin: 0 auto 2.25rem auto; font-size: 1.15rem; line-height: 1.6;">
+            Schedule a certified 48-hour continuous monitor test or request a fixed-price mitigation engineering estimate. Zero guesswork. Zero hidden fees. Guaranteed clean air.
+          </p>
+          <div style="display: flex; gap: 1.25rem; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <button class="btn btn-primary cta-equal-btn" data-modal-target="testingModal">
+              Schedule an Inspection &rarr;
+            </button>
+
+            <a href="tel:+18005557236" class="btn btn-amber cta-equal-btn">
+              Call +1 (800) 555-RADON
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- UNIVERSAL MODALS -->
+  <!-- 1. Book a Radon Test Modal -->
+  <div class="modal-overlay" id="testingModal" role="dialog" aria-modal="true" aria-labelledby="testModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <span class="mono-tag">SCHEDULE ASSESSMENT</span>
+        <h3 id="testModalTitle" style="margin-top: 0.4rem;">Book a Radon Test</h3>
+      </div>
+      <form class="modal-form">
+        <div class="modal-form-body">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" required placeholder="Jane Doe">
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" required placeholder="jane@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" required placeholder="+1 (555) 000-0000">
+            </div>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Property Type</label>
+              <select class="form-control" required>
+                <option value="Single Family">Single Family Home</option>
+                <option value="Condo">Apartment / Condo</option>
+                <option value="Commercial">Commercial Building</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Preferred Date</label>
+              <input type="date" class="form-control" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Continue &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Request Mitigation Quote Modal -->
+  <div class="modal-overlay" id="quoteModal" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div class="modal-header">
+        <span class="mono-tag">SYSTEM PLANNING</span>
+        <h3 id="quoteModalTitle" style="margin-top: 0.4rem;">Request Mitigation Quote</h3>
+      </div>
+      <form class="modal-form">
+        <div class="modal-form-body">
+          <div class="form-group">
+            <label class="form-label">Property Type</label>
+            <select class="form-control" required>
+              <option value="Single Family">Single Family Residence</option>
+              <option value="Multi-Family">Multi-Family Structure</option>
+              <option value="Commercial">Commercial / Office</option>
+            </select>
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Foundation Type</label>
+              <select class="form-control" required>
+                <option value="Basement">Basement</option>
+                <option value="Slab">Slab-on-Grade</option>
+                <option value="Crawlspace">Crawlspace</option>
+                <option value="Mixed">Mixed Foundation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Approx Size (sq ft)</label>
+              <input type="number" class="form-control" placeholder="e.g. 2400">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">ZIP / Postal Code</label>
+            <input type="text" class="form-control" required placeholder="12345">
+          </div>
+          <button type="submit" class="btn btn-amber" style="width: 100%; margin-top: 1rem;">Request Estimate &rarr;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- GLOBAL SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="footerTealGradAbout" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#4CB8B4"/>
+                  <stop offset="100%" stop-color="#397A78"/>
+                </linearGradient>
+                <linearGradient id="footerAmberGradAbout" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FCD566"/>
+                  <stop offset="100%" stop-color="#D5A548"/>
+                </linearGradient>
+              </defs>
+              <path d="M 50 6 L 86 26.5 A 3 3 0 0 1 88 29 L 88 71 A 3 3 0 0 1 86 73.5 L 50 94 A 3 3 0 0 1 47 94 L 14 73.5 A 3 3 0 0 1 12 71 L 12 29 A 3 3 0 0 1 14 26.5 Z" 
+                    fill="url(#footerTealGradAbout)" fill-opacity="0.12" stroke="#4CB8B4" stroke-width="2.5" stroke-opacity="0.5"/>
+              <path d="M 28 22 H 54 C 67 22 75 30 75 40 C 75 50 67 58 54 58 H 38 V 78 C 38 79.5 36.5 80 35 80 H 31 C 29.5 80 28 79.5 28 78 V 22 Z M 38 31 V 49 H 52 C 59 49 65 45 65 40 C 65 35 59 31 52 31 H 38 Z" 
+                    fill-rule="evenodd" fill="url(#footerTealGradAbout)"/>
+              <path d="M 48 50 L 68 76 C 69.5 78 72 79.5 75.5 79.5 H 77.5 C 78.5 79.5 79 78.5 78 77 L 57 50 H 48 Z" 
+                    fill="url(#footerTealGradAbout)"/>
+              <circle cx="52" cy="40" r="5" fill="url(#footerAmberGradAbout)"/>
+              <circle cx="52" cy="40" r="8.5" fill="none" stroke="#D5A548" stroke-width="1.5" stroke-dasharray="2.5 2.5" opacity="0.85"/>
+              <path d="M 72 18 C 82 28 85 43 81 57" fill="none" stroke="url(#footerAmberGradAbout)" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div class="brand-text-wrap">
+              <span class="brand-name" style="color: #FFFFFF;">RADENZA</span>
+              <span class="brand-desc" style="color: #94A6AE;">RADON TESTING &amp; MITIGATION</span>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem;">
+            Professional residential and commercial radon measurement, active sub-slab depressurization engineering, and post-mitigation verification services.
+          </p>
+
+          <!-- Social Media Icons Bar -->
+          <div style="display: flex; gap: 0.65rem; margin-top: 1.25rem;">
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="X Profile" title="X (Twitter)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Facebook Page" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube Channel" title="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram Profile" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>EXPLORE</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index2.html">Home 2 (Monitoring)</a></li>
+            <li><a href="about.html">About Radenza</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing Guide</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact &amp; Booking</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>SERVICES</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Radon Testing</a></li>
+            <li><a href="services.html">Radon Mitigation</a></li>
+            <li><a href="services.html">Re-Testing Verification</a></li>
+            <li><a href="services.html">Property Assessment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>CONTACT</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Phone: +1 (800) 555-RADON</p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Email: hello@radenza-demo.com</p>
+          <p style="font-size: 0.85rem;">Mon - Fri: 8:00 AM – 6:00 PM</p>
+        </div>
+
+        <div>
+          <h4>AIR SAFETY UPDATES</h4>
+          <p style="font-size: 0.85rem;">Subscribe for non-alarmist practical building indoor air safety guidance.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Radenza educational updates.');">
+            <input type="email" class="newsletter-input" placeholder="Enter email..." required>
+            <button type="submit" class="btn btn-primary newsletter-btn" aria-label="Subscribe to newsletter" title="Subscribe">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 RADENZA. All rights reserved. Professional Radon Testing &amp; Mitigation.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" style="position: fixed; bottom: 2rem; right: 2rem; width: 44px; height: 44px; border-radius: 50%; background: var(--brand-teal); color: #FFF; border: none; cursor: pointer; opacity: 0; pointer-events: none; transition: all 0.3s; z-index: 999; display: flex; align-items: center; justify-content: center;" aria-label="Back to top">
+    &uarr;
+  </button>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/booking.js"></script>
+  <script src="assets/js/about.js"></script>
+</body>
+</html>
